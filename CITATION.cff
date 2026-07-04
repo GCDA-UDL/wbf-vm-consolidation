@@ -59,8 +59,7 @@ authors:
 preferred-citation:
   type: article
   title: "Virtual Machine Consolidation in Cloud Computing based on Facebook Prophet Forecasting Neural-Network"
-  journal: "Future Generation Computer Systems"
-  notes: "Under major revision."
+  notes: "Manuscript in preparation."
   authors:
     - given-names: Sergi
       family-names: Vila

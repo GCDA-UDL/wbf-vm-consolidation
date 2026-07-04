@@ -8,7 +8,7 @@
 Reproducible code, configurations and analysis for the paper:
 
 > **Virtual Machine Consolidation in Cloud Computing based on Facebook Prophet Forecasting
-> Neural-Network** — *Future Generation Computer Systems*.
+> Neural-Network**.
 
 **Authors:** Sergi Vila, Vitor Luiz da Silva, Rosa Ana Tomás, Concepció Roig, Francesc Giné,
 Fernando Cores, Josep L. Lérida, Fernando Guirado — Department of Computer Engineering and Digital
