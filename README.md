@@ -1,7 +1,6 @@
 # WBF — Network-Aware VM Consolidation with Facebook Prophet (reproduction package)
 
-<!-- After the first Zenodo release, replace XXXXXXX with the minted DOI: -->
-<!-- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX) -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21197525.svg)](https://doi.org/10.5281/zenodo.21197525)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Reproducible with Docker](https://img.shields.io/badge/reproducible-Docker-2496ED.svg)
 
@@ -112,9 +111,9 @@ need them to reproduce — the runs above regenerate the outputs from scratch.
 
 ## Citation
 
-If you use this software, please cite **both** the paper (above) and this reproduction package.
-Machine-readable metadata is in [CITATION.cff](CITATION.cff); after the first release the Zenodo
-DOI badge at the top resolves to the archived version.
+If you use this software, please cite **both** the paper (above) and this reproduction package,
+archived on Zenodo: **DOI [10.5281/zenodo.21197525](https://doi.org/10.5281/zenodo.21197525)**.
+Machine-readable metadata is in [CITATION.cff](CITATION.cff).
 
 ## Funding
 
