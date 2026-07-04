@@ -1,0 +1,8 @@
+- Host:
+    Name: HP ProLiant ML110 G3
+    Cores: 2
+    CpuCapacity: [3000]
+    BandWidth: 1000000
+    DiskCapacity: 1000000
+    PowerModel: &id001 [105.0, 112.0, 118.0, 125.0, 131.0, 137.0, 147.0, 153.0, 157.0, 164.0, 169.0]
+    RAM: 800

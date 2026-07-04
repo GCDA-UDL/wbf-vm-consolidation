@@ -1,0 +1,318 @@
+{
+    "nodes": [
+        {
+            "id": 6,
+            "type": "LEAF"
+        },
+        {
+            "id": 12,
+            "type": "LEAF"
+        },
+        {
+            "id": 3,
+            "type": "TREE"
+        },
+        {
+            "id": 1,
+            "type": "TREE"
+        },
+        {
+            "id": 11,
+            "type": "LEAF"
+        },
+        {
+            "id": 4,
+            "type": "TREE"
+        },
+        {
+            "id": 0,
+            "type": "TREE"
+        },
+        {
+            "id": 5,
+            "type": "LEAF"
+        },
+        {
+            "id": 13,
+            "type": "LEAF"
+        },
+        {
+            "id": 7,
+            "type": "LEAF"
+        },
+        {
+            "id": 9,
+            "type": "LEAF"
+        },
+        {
+            "id": 10,
+            "type": "LEAF"
+        },
+        {
+            "id": 14,
+            "type": "LEAF"
+        },
+        {
+            "id": 2,
+            "type": "TREE"
+        },
+        {
+            "id": 8,
+            "type": "LEAF"
+        }
+    ],
+    "links": [
+        {
+            "weight": 100,
+            "end": 6,
+            "linkType": "defaultWeight",
+            "source": 0
+        },
+        {
+            "weight": 100,
+            "end": 0,
+            "linkType": "defaultWeight",
+            "source": 6
+        },
+        {
+            "weight": 1000,
+            "end": 1,
+            "linkType": "defaultWeightInterconnected",
+            "source": 3
+        },
+        {
+            "weight": 100,
+            "end": 7,
+            "linkType": "defaultWeight",
+            "source": 1
+        },
+        {
+            "weight": 1000,
+            "end": 2,
+            "linkType": "defaultWeightInterconnected",
+            "source": 4
+        },
+        {
+            "weight": 100,
+            "end": 2,
+            "linkType": "defaultWeight",
+            "source": 9
+        },
+        {
+            "weight": 100,
+            "end": 12,
+            "linkType": "defaultWeight",
+            "source": 3
+        },
+        {
+            "weight": 1000,
+            "end": 3,
+            "linkType": "defaultWeightInterconnected",
+            "source": 4
+        },
+        {
+            "weight": 1000,
+            "end": 2,
+            "linkType": "defaultWeightInterconnected",
+            "source": 1
+        },
+        {
+            "weight": 1000,
+            "end": 0,
+            "linkType": "defaultWeightInterconnected",
+            "source": 1
+        },
+        {
+            "weight": 1000,
+            "end": 2,
+            "linkType": "defaultWeightInterconnected",
+            "source": 3
+        },
+        {
+            "weight": 1000,
+            "end": 1,
+            "linkType": "defaultWeightInterconnected",
+            "source": 2
+        },
+        {
+            "weight": 1000,
+            "end": 4,
+            "linkType": "defaultWeightInterconnected",
+            "source": 3
+        },
+        {
+            "weight": 100,
+            "end": 11,
+            "linkType": "defaultWeight",
+            "source": 3
+        },
+        {
+            "weight": 1000,
+            "end": 2,
+            "linkType": "defaultWeightInterconnected",
+            "source": 0
+        },
+        {
+            "weight": 100,
+            "end": 0,
+            "linkType": "defaultWeight",
+            "source": 5
+        },
+        {
+            "weight": 1000,
+            "end": 0,
+            "linkType": "defaultWeightInterconnected",
+            "source": 4
+        },
+        {
+            "weight": 1000,
+            "end": 4,
+            "linkType": "defaultWeightInterconnected",
+            "source": 2
+        },
+        {
+            "weight": 100,
+            "end": 13,
+            "linkType": "defaultWeight",
+            "source": 4
+        },
+        {
+            "weight": 1000,
+            "end": 0,
+            "linkType": "defaultWeightInterconnected",
+            "source": 2
+        },
+        {
+            "weight": 1000,
+            "end": 3,
+            "linkType": "defaultWeightInterconnected",
+            "source": 0
+        },
+        {
+            "weight": 100,
+            "end": 2,
+            "linkType": "defaultWeight",
+            "source": 10
+        },
+        {
+            "weight": 1000,
+            "end": 4,
+            "linkType": "defaultWeightInterconnected",
+            "source": 1
+        },
+        {
+            "weight": 100,
+            "end": 10,
+            "linkType": "defaultWeight",
+            "source": 2
+        },
+        {
+            "weight": 1000,
+            "end": 4,
+            "linkType": "defaultWeightInterconnected",
+            "source": 0
+        },
+        {
+            "weight": 100,
+            "end": 3,
+            "linkType": "defaultWeight",
+            "source": 11
+        },
+        {
+            "weight": 100,
+            "end": 3,
+            "linkType": "defaultWeight",
+            "source": 12
+        },
+        {
+            "weight": 100,
+            "end": 9,
+            "linkType": "defaultWeight",
+            "source": 2
+        },
+        {
+            "weight": 1000,
+            "end": 0,
+            "linkType": "defaultWeightInterconnected",
+            "source": 3
+        },
+        {
+            "weight": 100,
+            "end": 14,
+            "linkType": "defaultWeight",
+            "source": 4
+        },
+        {
+            "weight": 1000,
+            "end": 3,
+            "linkType": "defaultWeightInterconnected",
+            "source": 1
+        },
+        {
+            "weight": 100,
+            "end": 4,
+            "linkType": "defaultWeight",
+            "source": 13
+        },
+        {
+            "weight": 100,
+            "end": 8,
+            "linkType": "defaultWeight",
+            "source": 1
+        },
+        {
+            "weight": 1000,
+            "end": 1,
+            "linkType": "defaultWeightInterconnected",
+            "source": 4
+        },
+        {
+            "weight": 100,
+            "end": 1,
+            "linkType": "defaultWeight",
+            "source": 8
+        },
+        {
+            "weight": 100,
+            "end": 1,
+            "linkType": "defaultWeight",
+            "source": 7
+        },
+        {
+            "weight": 100,
+            "end": 5,
+            "linkType": "defaultWeight",
+            "source": 0
+        },
+        {
+            "weight": 1000,
+            "end": 3,
+            "linkType": "defaultWeightInterconnected",
+            "source": 2
+        },
+        {
+            "weight": 100,
+            "end": 4,
+            "linkType": "defaultWeight",
+            "source": 14
+        },
+        {
+            "weight": 1000,
+            "end": 1,
+            "linkType": "defaultWeightInterconnected",
+            "source": 0
+        }
+    ],
+    "info": {
+        "numHosts": 10,
+        "numSwitchs": 5,
+        "randomSeed": 1549750620662,
+        "numElementsPerInterconnectedLevel": [5],
+        "defaultWeightTree": 100,
+        "numNodes": 15,
+        "numLinks": 40,
+        "degreeOfInterconnection": 0.4000000059604645,
+        "numElementsPerTreeLevel": [2],
+        "defaultWeightInterconnected": 1000
+    }
+}

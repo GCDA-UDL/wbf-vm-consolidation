@@ -1,0 +1,21 @@
+- Host:
+    Name: HP ProLiant ML110 G4
+    Cores: 1
+    CpuCapacity: [3720]
+    BandWidth: 100
+    DiskCapacity: 1000000
+    PowerModel: &id001 [86.0, 89.4, 92.6, 96.0, 99.5, 102.0, 106.0, 108.0, 112.0, 114.0, 117.0]
+    RAM: 4096000
+    EnergyOn: 21057.158
+    EnergyOff: 2721.474
+
+- Host:
+    Name: HP ProLiant ML110 G5
+    Cores: 1
+    CpuCapacity: [5320]
+    BandWidth: 100
+    DiskCapacity: 1000000
+    PowerModel: &id001 [93.7, 97.0, 101.0, 105.0, 110.0, 116.0, 121.0, 125.0, 129.0, 133.0, 135.0]
+    RAM: 4096000
+    EnergyOn: 30114.0
+    EnergyOff: 3892.0

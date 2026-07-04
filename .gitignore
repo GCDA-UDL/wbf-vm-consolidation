@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+venv*/
+.venv/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Experiment run outputs (keep results/reference/ tracked)
+results/*
+!results/.gitkeep
+!results/reference/
+results/reference/**/__pycache__/
+output/
+generatedExperiments/
+debugLog.txt
+*.log
+
+# Heavy raw/testing workload variants (only the *_100_mostDiff subsets are shipped)
+workloads/**/*_testing*/
+
+# Heavy run artifacts archived outside git (shared cloud + Zenodo) — see ARTIFACTS.md
+*run-outputs*.zip
+logs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -1,0 +1,24 @@
+- VM:
+    Cores: 1
+    CpuCapacity: [500]
+    BandWidth: 1
+    DiskCapacity: 1
+    RAM: 613
+- VM:
+    Cores: 1
+    CpuCapacity: [1000]
+    BandWidth: 1
+    DiskCapacity: 1
+    RAM: 1700
+- VM:
+    Cores: 1
+    CpuCapacity: [2000]
+    BandWidth: 1
+    DiskCapacity: 1
+    RAM: 3750
+- VM:
+    Cores: 1
+    CpuCapacity: [2500]
+    BandWidth: 1
+    DiskCapacity: 1
+    RAM: 850

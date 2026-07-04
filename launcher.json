@@ -1,0 +1,11 @@
+{
+  "_comment": "Standalone launcher for the reproduction repo. Run from the repo root mounted at /workspace.",
+  "baseFolder": "/workspace",
+  "experimentsFolder": "testbed",
+  "outputFolder": "results",
+  "experiment": "paper4_full_planetlab_prophet",
+  "jpyLib": "/usr/local/lib/python3.8/dist-packages/jpy.cpython-38-x86_64-linux-gnu.so",
+  "jdlLib": "/usr/local/lib/python3.8/dist-packages/jdl.cpython-38-x86_64-linux-gnu.so",
+  "decisionLogger": "/workspace/results/debugLog.txt",
+  "pymodule": "/workspace/pymodule"
+}

@@ -1,0 +1,20 @@
+# Keep the build context small. The repo is mounted at /workspace at run time,
+# so run outputs and heavy artifacts do not need to enter the image.
+.git/
+output/
+generatedExperiments/
+logs/
+*.log
+results/reference/**/__pycache__/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ipynb_checkpoints/
+venv*/
+.venv/
+*run-outputs*.zip
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

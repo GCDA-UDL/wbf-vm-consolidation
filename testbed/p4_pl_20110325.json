@@ -1,0 +1,276 @@
+{
+  "override": [],
+  "name": [
+    "p4_pl_20110325"
+  ],
+  "experimentOutputFolder": [
+    "p4_pl_20110325"
+  ],
+  "vmOptimizerPolicy": [
+    "future"
+  ],
+  "selectionMode": [
+    "first"
+  ],
+  "hostOverSaturationPolicy": [
+    "mad"
+  ],
+  "hostUnderUtilisationPolicy": [
+    "def"
+  ],
+  "vmMigrationPolicy": [
+    "ac"
+  ],
+  "allocationPolicy": [
+    "custom"
+  ],
+  "techniqueLoader": [
+    "v3"
+  ],
+  "dataSource": [
+    "original"
+  ],
+  "signalProcessing": [
+    [
+      "none"
+    ]
+  ],
+  "forecastingTechnique": [
+    [
+      "last"
+    ]
+  ],
+  "hostForecastingResume": [
+    "mean"
+  ],
+  "vmSignalProcessingAccurate": [
+    [
+      "none"
+    ]
+  ],
+  "vmForecastingTechniqueAccurate": [
+    [
+      "last"
+    ]
+  ],
+  "vmForecastingResumeAccurate": [
+    "mean"
+  ],
+  "vmSignalProcessingBasic": [
+    [
+      "none"
+    ]
+  ],
+  "vmForecastingTechniqueBasic": [
+    [
+      "last"
+    ]
+  ],
+  "vmForecastingResumeBasic": [
+    "mean"
+  ],
+  "limitAdjustment": [
+    [
+      "none"
+    ]
+  ],
+  "defaultHistoryLength": [
+    30
+  ],
+  "forecastingHistoryLength": [
+    30
+  ],
+  "techniquesConfiguration": [
+    {
+      "pearson": 0.45
+    }
+  ],
+  "topology": [
+    "fatTreeTopology_k-2_g-2_s-2_hs-2_h-16"
+  ],
+  "hosts": [
+    "testHostsOneCore"
+  ],
+  "hostsDistribution": [
+    [
+      1,
+      1
+    ]
+  ],
+  "vms": [
+    "vms4"
+  ],
+  "vmsDistribution": [
+    [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  ],
+  "interactions": [
+    [
+      "fnss3000_0_20",
+      "fnss3000_20_60",
+      "fnss3000_60_95"
+    ]
+  ],
+  "interactionsDistribution": [
+    [
+      5,
+      3,
+      2
+    ]
+  ],
+  "workload": [
+    "path"
+  ],
+  "workloadTrace": [
+    "planetlab/planetlab_20110325_100_mostDiff"
+  ],
+  "dynamicResources": [
+    [
+      "CPU",
+      "BW",
+      "RAM"
+    ]
+  ],
+  "mipsStatsInterpolation": [
+    false
+  ],
+  "parameter": [
+    "1.0"
+  ],
+  "numCloudlets": [
+    100
+  ],
+  "utilizationThreshold": [
+    1.0
+  ],
+  "randomSeed": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "migrationInterval": [
+    6
+  ],
+  "dataStartStep": [
+    0
+  ],
+  "simulationTimeLimit": [
+    86400.0
+  ],
+  "internalClusterRate": [
+    0.05
+  ],
+  "externalClusterRate": [
+    0.01
+  ],
+  "logOutputFolder": [
+    "outputLog"
+  ],
+  "printer": [
+    false
+  ],
+  "enableOutput": [
+    false
+  ],
+  "outputToFile": [
+    true
+  ],
+  "hostAllocationUtilization": [
+    0.4
+  ],
+  "onlyInitialHosts": [
+    false
+  ],
+  "outputFullTrace": [
+    false
+  ],
+  "outputCSVTrace": [
+    false
+  ],
+  "outputGraphTrace": [
+    false
+  ],
+  "overrideLinkWeight": [
+    true
+  ],
+  "logicLinkWeight": [
+    10
+  ],
+  "defaultWeight": [
+    100
+  ],
+  "defaultWeightInterconnected": [
+    1000
+  ],
+  "isTunning": [
+    true
+  ],
+  "tunningValue": [
+    0.65
+  ],
+  "network": [
+    true
+  ],
+  "adjustLoadRatio": [
+    false
+  ],
+  "minRatio": [
+    0.55
+  ],
+  "maxRatio": [
+    0.65
+  ],
+  "offsetRatio": [
+    0.05
+  ],
+  "selectionPolicy": [
+    "psp2"
+  ],
+  "hostForecastingTechnique": [
+    [
+      "fbProphet"
+    ]
+  ],
+  "hostSignalProcessing": [
+    [
+      "none"
+    ],
+    [
+      "bollinger",
+      5,
+      0.5
+    ]
+  ]
+}

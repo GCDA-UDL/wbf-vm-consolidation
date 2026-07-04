@@ -1,0 +1,88 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the article (preferred-citation) and this software."
+title: "WBF — Network-Aware VM Consolidation with Facebook Prophet (reproduction package)"
+abstract: >-
+  Self-contained Docker reproduction package for WBF (WPSP + Bollinger Bands + Facebook Prophet),
+  a network-aware proactive virtual-machine consolidation method for cloud data centers, built on
+  CloudSim/MetaCloudSim. Includes the simulator, experiment configurations, 100-VM workload
+  subsets (PlanetLab, Alibaba 2018, Materna, Microsoft Azure 2019), forecasting code and analysis
+  notebooks, plus the AMOVMC and EUQ-VMC (2025) baselines reproduced in the same simulator.
+type: software
+version: 0.1.0
+date-released: 2026-07-04
+license: MIT
+repository-code: "https://github.com/GCDA-UDL/wbf-vm-consolidation"
+keywords:
+  - cloud computing
+  - virtual machine consolidation
+  - Facebook Prophet
+  - Bollinger Bands
+  - CloudSim
+  - energy efficiency
+  - forecasting
+  - service level agreement
+  - VM migration
+authors:
+  - given-names: Sergi
+    family-names: Vila
+    orcid: "https://orcid.org/0000-0002-4536-5025"
+    affiliation: "Department of Computer Engineering and Digital Design, University of Lleida"
+  - given-names: Vitor Luiz
+    family-names: da Silva Verbel
+    orcid: "https://orcid.org/0000-0002-3296-2752"
+    affiliation: "Department of Computer Engineering and Digital Design, University of Lleida"
+    email: vitor.dasilva@udl.cat
+  - given-names: Rosa Ana
+    family-names: Tomás
+    orcid: "https://orcid.org/0000-0002-1995-3974"
+    affiliation: "Department of Computer Engineering and Digital Design, University of Lleida"
+  - given-names: Concepció
+    family-names: Roig
+    orcid: "https://orcid.org/0000-0003-3029-3820"
+    affiliation: "Department of Computer Engineering and Digital Design, University of Lleida"
+  - given-names: Francesc
+    family-names: Giné
+    orcid: "https://orcid.org/0000-0002-2348-5018"
+    affiliation: "Department of Computer Engineering and Digital Design, University of Lleida"
+  - given-names: Fernando
+    family-names: Cores
+    orcid: "https://orcid.org/0000-0003-2910-6709"
+    affiliation: "Department of Computer Engineering and Digital Design, University of Lleida"
+  - given-names: Josep L.
+    family-names: Lérida
+    orcid: "https://orcid.org/0000-0002-9352-9338"
+    affiliation: "Department of Computer Engineering and Digital Design, University of Lleida"
+  - given-names: Fernando
+    family-names: Guirado
+    orcid: "https://orcid.org/0000-0003-1352-9555"
+    affiliation: "Department of Computer Engineering and Digital Design, University of Lleida"
+preferred-citation:
+  type: article
+  title: "Virtual Machine Consolidation in Cloud Computing based on Facebook Prophet Forecasting Neural-Network"
+  journal: "Future Generation Computer Systems"
+  notes: "Under major revision."
+  authors:
+    - given-names: Sergi
+      family-names: Vila
+      orcid: "https://orcid.org/0000-0002-4536-5025"
+    - given-names: Vitor Luiz
+      family-names: da Silva Verbel
+      orcid: "https://orcid.org/0000-0002-3296-2752"
+    - given-names: Rosa Ana
+      family-names: Tomás
+      orcid: "https://orcid.org/0000-0002-1995-3974"
+    - given-names: Concepció
+      family-names: Roig
+      orcid: "https://orcid.org/0000-0003-3029-3820"
+    - given-names: Francesc
+      family-names: Giné
+      orcid: "https://orcid.org/0000-0002-2348-5018"
+    - given-names: Fernando
+      family-names: Cores
+      orcid: "https://orcid.org/0000-0003-2910-6709"
+    - given-names: Josep L.
+      family-names: Lérida
+      orcid: "https://orcid.org/0000-0002-9352-9338"
+    - given-names: Fernando
+      family-names: Guirado
+      orcid: "https://orcid.org/0000-0003-1352-9555"

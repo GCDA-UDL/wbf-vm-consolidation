@@ -1,0 +1,66 @@
+{
+    "nodes": [
+        {
+            "id": 1,
+            "type": "TREE"
+        },
+        {
+            "id": 3,
+            "type": "LEAF"
+        },
+        {
+            "id": 2,
+            "type": "TREE"
+        },
+        {
+            "id": 0,
+            "type": "CENTRAL"
+        }
+    ],
+    "links": [
+        {
+            "weight": 1000,
+            "end": 2,
+            "linkType": "defaultWeightInterconnected",
+            "source": 1
+        },
+        {
+            "weight": 1000,
+            "end": 1,
+            "linkType": "defaultWeightInterconnected",
+            "source": 2
+        },
+        {
+            "weight": 100,
+            "end": 3,
+            "linkType": "defaultWeight",
+            "source": 2
+        },
+        {
+            "weight": 1000,
+            "end": 0,
+            "linkType": "defaultWeightInterconnected",
+            "source": 1
+        },
+        {
+            "weight": 1000,
+            "end": 1,
+            "linkType": "defaultWeightInterconnected",
+            "source": 0
+        },
+        {
+            "weight": 100,
+            "end": 2,
+            "linkType": "defaultWeight",
+            "source": 3
+        }
+    ],
+    "info": {
+        "numHosts": 1,
+        "numSwitchs": 3,
+        "defaultWeightTree": 100,
+        "numNodes": 4,
+        "numLinks": 6,
+        "defaultWeightInterconnected": 1000
+    }
+}

@@ -1,0 +1,1181 @@
+{
+    "nodes": [
+        {
+            "id": 36,
+            "type": "LEAF"
+        },
+        {
+            "id": 59,
+            "type": "LEAF"
+        },
+        {
+            "id": 38,
+            "type": "LEAF"
+        },
+        {
+            "id": 49,
+            "type": "LEAF"
+        },
+        {
+            "id": 0,
+            "type": "CENTRAL"
+        },
+        {
+            "id": 5,
+            "type": "TREE"
+        },
+        {
+            "id": 13,
+            "type": "LEAF"
+        },
+        {
+            "id": 25,
+            "type": "LEAF"
+        },
+        {
+            "id": 35,
+            "type": "LEAF"
+        },
+        {
+            "id": 53,
+            "type": "TREE"
+        },
+        {
+            "id": 42,
+            "type": "TREE"
+        },
+        {
+            "id": 54,
+            "type": "TREE"
+        },
+        {
+            "id": 57,
+            "type": "LEAF"
+        },
+        {
+            "id": 33,
+            "type": "LEAF"
+        },
+        {
+            "id": 47,
+            "type": "LEAF"
+        },
+        {
+            "id": 11,
+            "type": "LEAF"
+        },
+        {
+            "id": 64,
+            "type": "LEAF"
+        },
+        {
+            "id": 52,
+            "type": "LEAF"
+        },
+        {
+            "id": 3,
+            "type": "CENTRAL"
+        },
+        {
+            "id": 37,
+            "type": "LEAF"
+        },
+        {
+            "id": 48,
+            "type": "LEAF"
+        },
+        {
+            "id": 16,
+            "type": "LEAF"
+        },
+        {
+            "id": 24,
+            "type": "LEAF"
+        },
+        {
+            "id": 26,
+            "type": "LEAF"
+        },
+        {
+            "id": 41,
+            "type": "TREE"
+        },
+        {
+            "id": 27,
+            "type": "LEAF"
+        },
+        {
+            "id": 12,
+            "type": "LEAF"
+        },
+        {
+            "id": 50,
+            "type": "LEAF"
+        },
+        {
+            "id": 10,
+            "type": "LEAF"
+        },
+        {
+            "id": 15,
+            "type": "LEAF"
+        },
+        {
+            "id": 62,
+            "type": "LEAF"
+        },
+        {
+            "id": 46,
+            "type": "LEAF"
+        },
+        {
+            "id": 2,
+            "type": "CENTRAL"
+        },
+        {
+            "id": 17,
+            "type": "TREE"
+        },
+        {
+            "id": 51,
+            "type": "LEAF"
+        },
+        {
+            "id": 20,
+            "type": "LEAF"
+        },
+        {
+            "id": 6,
+            "type": "TREE"
+        },
+        {
+            "id": 44,
+            "type": "LEAF"
+        },
+        {
+            "id": 56,
+            "type": "LEAF"
+        },
+        {
+            "id": 28,
+            "type": "LEAF"
+        },
+        {
+            "id": 19,
+            "type": "TREE"
+        },
+        {
+            "id": 1,
+            "type": "CENTRAL"
+        },
+        {
+            "id": 4,
+            "type": "CENTRAL"
+        },
+        {
+            "id": 21,
+            "type": "LEAF"
+        },
+        {
+            "id": 9,
+            "type": "LEAF"
+        },
+        {
+            "id": 32,
+            "type": "LEAF"
+        },
+        {
+            "id": 31,
+            "type": "TREE"
+        },
+        {
+            "id": 63,
+            "type": "LEAF"
+        },
+        {
+            "id": 60,
+            "type": "LEAF"
+        },
+        {
+            "id": 29,
+            "type": "TREE"
+        },
+        {
+            "id": 43,
+            "type": "TREE"
+        },
+        {
+            "id": 22,
+            "type": "LEAF"
+        },
+        {
+            "id": 39,
+            "type": "LEAF"
+        },
+        {
+            "id": 40,
+            "type": "LEAF"
+        },
+        {
+            "id": 61,
+            "type": "LEAF"
+        },
+        {
+            "id": 30,
+            "type": "TREE"
+        },
+        {
+            "id": 55,
+            "type": "TREE"
+        },
+        {
+            "id": 34,
+            "type": "LEAF"
+        },
+        {
+            "id": 45,
+            "type": "LEAF"
+        },
+        {
+            "id": 8,
+            "type": "LEAF"
+        },
+        {
+            "id": 58,
+            "type": "LEAF"
+        },
+        {
+            "id": 7,
+            "type": "TREE"
+        },
+        {
+            "id": 14,
+            "type": "LEAF"
+        },
+        {
+            "id": 18,
+            "type": "TREE"
+        },
+        {
+            "id": 23,
+            "type": "LEAF"
+        }
+    ],
+    "links": [
+        {
+            "weight": 1000,
+            "end": 2,
+            "linkType": "defaultWeightInterconnected",
+            "source": 30
+        },
+        {
+            "weight": 100,
+            "end": 44,
+            "linkType": "defaultWeight",
+            "source": 41
+        },
+        {
+            "weight": 100,
+            "end": 45,
+            "linkType": "defaultWeight",
+            "source": 41
+        },
+        {
+            "weight": 100,
+            "end": 53,
+            "linkType": "defaultWeight",
+            "source": 57
+        },
+        {
+            "weight": 100,
+            "end": 5,
+            "linkType": "defaultWeight",
+            "source": 8
+        },
+        {
+            "weight": 100,
+            "end": 38,
+            "linkType": "defaultWeight",
+            "source": 31
+        },
+        {
+            "weight": 100,
+            "end": 16,
+            "linkType": "defaultWeight",
+            "source": 7
+        },
+        {
+            "weight": 100,
+            "end": 18,
+            "linkType": "defaultWeight",
+            "source": 23
+        },
+        {
+            "weight": 1000,
+            "end": 2,
+            "linkType": "defaultWeightInterconnected",
+            "source": 3
+        },
+        {
+            "weight": 100,
+            "end": 43,
+            "linkType": "defaultWeight",
+            "source": 50
+        },
+        {
+            "weight": 1000,
+            "end": 3,
+            "linkType": "defaultWeightInterconnected",
+            "source": 42
+        },
+        {
+            "weight": 1000,
+            "end": 5,
+            "linkType": "defaultWeightInterconnected",
+            "source": 6
+        },
+        {
+            "weight": 100,
+            "end": 57,
+            "linkType": "defaultWeight",
+            "source": 53
+        },
+        {
+            "weight": 100,
+            "end": 34,
+            "linkType": "defaultWeight",
+            "source": 29
+        },
+        {
+            "weight": 100,
+            "end": 35,
+            "linkType": "defaultWeight",
+            "source": 30
+        },
+        {
+            "weight": 1000,
+            "end": 0,
+            "linkType": "defaultWeightInterconnected",
+            "source": 2
+        },
+        {
+            "weight": 100,
+            "end": 5,
+            "linkType": "defaultWeight",
+            "source": 9
+        },
+        {
+            "weight": 1000,
+            "end": 4,
+            "linkType": "defaultWeightInterconnected",
+            "source": 0
+        },
+        {
+            "weight": 100,
+            "end": 6,
+            "linkType": "defaultWeight",
+            "source": 11
+        },
+        {
+            "weight": 1000,
+            "end": 3,
+            "linkType": "defaultWeightInterconnected",
+            "source": 1
+        },
+        {
+            "weight": 1000,
+            "end": 17,
+            "linkType": "defaultWeightInterconnected",
+            "source": 19
+        },
+        {
+            "weight": 1000,
+            "end": 53,
+            "linkType": "defaultWeightInterconnected",
+            "source": 54
+        },
+        {
+            "weight": 1000,
+            "end": 4,
+            "linkType": "defaultWeightInterconnected",
+            "source": 54
+        },
+        {
+            "weight": 1000,
+            "end": 30,
+            "linkType": "defaultWeightInterconnected",
+            "source": 29
+        },
+        {
+            "weight": 100,
+            "end": 42,
+            "linkType": "defaultWeight",
+            "source": 47
+        },
+        {
+            "weight": 1000,
+            "end": 31,
+            "linkType": "defaultWeightInterconnected",
+            "source": 29
+        },
+        {
+            "weight": 1000,
+            "end": 42,
+            "linkType": "defaultWeightInterconnected",
+            "source": 43
+        },
+        {
+            "weight": 1000,
+            "end": 3,
+            "linkType": "defaultWeightInterconnected",
+            "source": 2
+        },
+        {
+            "weight": 100,
+            "end": 63,
+            "linkType": "defaultWeight",
+            "source": 55
+        },
+        {
+            "weight": 100,
+            "end": 7,
+            "linkType": "defaultWeight",
+            "source": 14
+        },
+        {
+            "weight": 100,
+            "end": 21,
+            "linkType": "defaultWeight",
+            "source": 17
+        },
+        {
+            "weight": 1000,
+            "end": 55,
+            "linkType": "defaultWeightInterconnected",
+            "source": 54
+        },
+        {
+            "weight": 100,
+            "end": 29,
+            "linkType": "defaultWeight",
+            "source": 33
+        },
+        {
+            "weight": 1000,
+            "end": 42,
+            "linkType": "defaultWeightInterconnected",
+            "source": 41
+        },
+        {
+            "weight": 100,
+            "end": 56,
+            "linkType": "defaultWeight",
+            "source": 53
+        },
+        {
+            "weight": 100,
+            "end": 53,
+            "linkType": "defaultWeight",
+            "source": 56
+        },
+        {
+            "weight": 100,
+            "end": 30,
+            "linkType": "defaultWeight",
+            "source": 36
+        },
+        {
+            "weight": 100,
+            "end": 17,
+            "linkType": "defaultWeight",
+            "source": 22
+        },
+        {
+            "weight": 1000,
+            "end": 7,
+            "linkType": "defaultWeightInterconnected",
+            "source": 5
+        },
+        {
+            "weight": 100,
+            "end": 42,
+            "linkType": "defaultWeight",
+            "source": 49
+        },
+        {
+            "weight": 1000,
+            "end": 2,
+            "linkType": "defaultWeightInterconnected",
+            "source": 1
+        },
+        {
+            "weight": 1000,
+            "end": 18,
+            "linkType": "defaultWeightInterconnected",
+            "source": 19
+        },
+        {
+            "weight": 100,
+            "end": 31,
+            "linkType": "defaultWeight",
+            "source": 38
+        },
+        {
+            "weight": 100,
+            "end": 46,
+            "linkType": "defaultWeight",
+            "source": 41
+        },
+        {
+            "weight": 1000,
+            "end": 53,
+            "linkType": "defaultWeightInterconnected",
+            "source": 55
+        },
+        {
+            "weight": 100,
+            "end": 28,
+            "linkType": "defaultWeight",
+            "source": 19
+        },
+        {
+            "weight": 100,
+            "end": 19,
+            "linkType": "defaultWeight",
+            "source": 27
+        },
+        {
+            "weight": 1000,
+            "end": 4,
+            "linkType": "defaultWeightInterconnected",
+            "source": 2
+        },
+        {
+            "weight": 100,
+            "end": 6,
+            "linkType": "defaultWeight",
+            "source": 12
+        },
+        {
+            "weight": 1000,
+            "end": 30,
+            "linkType": "defaultWeightInterconnected",
+            "source": 31
+        },
+        {
+            "weight": 100,
+            "end": 25,
+            "linkType": "defaultWeight",
+            "source": 18
+        },
+        {
+            "weight": 100,
+            "end": 55,
+            "linkType": "defaultWeight",
+            "source": 62
+        },
+        {
+            "weight": 1000,
+            "end": 19,
+            "linkType": "defaultWeightInterconnected",
+            "source": 17
+        },
+        {
+            "weight": 100,
+            "end": 17,
+            "linkType": "defaultWeight",
+            "source": 20
+        },
+        {
+            "weight": 100,
+            "end": 24,
+            "linkType": "defaultWeight",
+            "source": 18
+        },
+        {
+            "weight": 1000,
+            "end": 4,
+            "linkType": "defaultWeightInterconnected",
+            "source": 1
+        },
+        {
+            "weight": 100,
+            "end": 19,
+            "linkType": "defaultWeight",
+            "source": 26
+        },
+        {
+            "weight": 100,
+            "end": 11,
+            "linkType": "defaultWeight",
+            "source": 6
+        },
+        {
+            "weight": 100,
+            "end": 41,
+            "linkType": "defaultWeight",
+            "source": 45
+        },
+        {
+            "weight": 1000,
+            "end": 0,
+            "linkType": "defaultWeightInterconnected",
+            "source": 3
+        },
+        {
+            "weight": 100,
+            "end": 41,
+            "linkType": "defaultWeight",
+            "source": 46
+        },
+        {
+            "weight": 100,
+            "end": 59,
+            "linkType": "defaultWeight",
+            "source": 54
+        },
+        {
+            "weight": 1000,
+            "end": 42,
+            "linkType": "defaultWeightInterconnected",
+            "source": 3
+        },
+        {
+            "weight": 100,
+            "end": 49,
+            "linkType": "defaultWeight",
+            "source": 42
+        },
+        {
+            "weight": 100,
+            "end": 51,
+            "linkType": "defaultWeight",
+            "source": 43
+        },
+        {
+            "weight": 100,
+            "end": 12,
+            "linkType": "defaultWeight",
+            "source": 6
+        },
+        {
+            "weight": 100,
+            "end": 39,
+            "linkType": "defaultWeight",
+            "source": 31
+        },
+        {
+            "weight": 100,
+            "end": 36,
+            "linkType": "defaultWeight",
+            "source": 30
+        },
+        {
+            "weight": 100,
+            "end": 43,
+            "linkType": "defaultWeight",
+            "source": 52
+        },
+        {
+            "weight": 100,
+            "end": 52,
+            "linkType": "defaultWeight",
+            "source": 43
+        },
+        {
+            "weight": 1000,
+            "end": 41,
+            "linkType": "defaultWeightInterconnected",
+            "source": 43
+        },
+        {
+            "weight": 100,
+            "end": 47,
+            "linkType": "defaultWeight",
+            "source": 42
+        },
+        {
+            "weight": 100,
+            "end": 64,
+            "linkType": "defaultWeight",
+            "source": 55
+        },
+        {
+            "weight": 100,
+            "end": 40,
+            "linkType": "defaultWeight",
+            "source": 31
+        },
+        {
+            "weight": 100,
+            "end": 37,
+            "linkType": "defaultWeight",
+            "source": 30
+        },
+        {
+            "weight": 100,
+            "end": 42,
+            "linkType": "defaultWeight",
+            "source": 48
+        },
+        {
+            "weight": 1000,
+            "end": 6,
+            "linkType": "defaultWeightInterconnected",
+            "source": 7
+        },
+        {
+            "weight": 100,
+            "end": 29,
+            "linkType": "defaultWeight",
+            "source": 34
+        },
+        {
+            "weight": 100,
+            "end": 20,
+            "linkType": "defaultWeight",
+            "source": 17
+        },
+        {
+            "weight": 1000,
+            "end": 29,
+            "linkType": "defaultWeightInterconnected",
+            "source": 30
+        },
+        {
+            "weight": 1000,
+            "end": 3,
+            "linkType": "defaultWeightInterconnected",
+            "source": 4
+        },
+        {
+            "weight": 100,
+            "end": 23,
+            "linkType": "defaultWeight",
+            "source": 18
+        },
+        {
+            "weight": 1000,
+            "end": 54,
+            "linkType": "defaultWeightInterconnected",
+            "source": 55
+        },
+        {
+            "weight": 100,
+            "end": 53,
+            "linkType": "defaultWeight",
+            "source": 58
+        },
+        {
+            "weight": 1000,
+            "end": 43,
+            "linkType": "defaultWeightInterconnected",
+            "source": 42
+        },
+        {
+            "weight": 1000,
+            "end": 4,
+            "linkType": "defaultWeightInterconnected",
+            "source": 3
+        },
+        {
+            "weight": 1000,
+            "end": 18,
+            "linkType": "defaultWeightInterconnected",
+            "source": 1
+        },
+        {
+            "weight": 100,
+            "end": 5,
+            "linkType": "defaultWeight",
+            "source": 10
+        },
+        {
+            "weight": 1000,
+            "end": 17,
+            "linkType": "defaultWeightInterconnected",
+            "source": 18
+        },
+        {
+            "weight": 1000,
+            "end": 0,
+            "linkType": "defaultWeightInterconnected",
+            "source": 4
+        },
+        {
+            "weight": 1000,
+            "end": 43,
+            "linkType": "defaultWeightInterconnected",
+            "source": 41
+        },
+        {
+            "weight": 100,
+            "end": 61,
+            "linkType": "defaultWeight",
+            "source": 54
+        },
+        {
+            "weight": 1000,
+            "end": 29,
+            "linkType": "defaultWeightInterconnected",
+            "source": 31
+        },
+        {
+            "weight": 100,
+            "end": 14,
+            "linkType": "defaultWeight",
+            "source": 7
+        },
+        {
+            "weight": 100,
+            "end": 9,
+            "linkType": "defaultWeight",
+            "source": 5
+        },
+        {
+            "weight": 100,
+            "end": 29,
+            "linkType": "defaultWeight",
+            "source": 32
+        },
+        {
+            "weight": 100,
+            "end": 62,
+            "linkType": "defaultWeight",
+            "source": 55
+        },
+        {
+            "weight": 100,
+            "end": 8,
+            "linkType": "defaultWeight",
+            "source": 5
+        },
+        {
+            "weight": 100,
+            "end": 19,
+            "linkType": "defaultWeight",
+            "source": 28
+        },
+        {
+            "weight": 1000,
+            "end": 1,
+            "linkType": "defaultWeightInterconnected",
+            "source": 18
+        },
+        {
+            "weight": 100,
+            "end": 55,
+            "linkType": "defaultWeight",
+            "source": 64
+        },
+        {
+            "weight": 1000,
+            "end": 0,
+            "linkType": "defaultWeightInterconnected",
+            "source": 6
+        },
+        {
+            "weight": 1000,
+            "end": 1,
+            "linkType": "defaultWeightInterconnected",
+            "source": 4
+        },
+        {
+            "weight": 100,
+            "end": 26,
+            "linkType": "defaultWeight",
+            "source": 19
+        },
+        {
+            "weight": 100,
+            "end": 41,
+            "linkType": "defaultWeight",
+            "source": 44
+        },
+        {
+            "weight": 100,
+            "end": 48,
+            "linkType": "defaultWeight",
+            "source": 42
+        },
+        {
+            "weight": 100,
+            "end": 50,
+            "linkType": "defaultWeight",
+            "source": 43
+        },
+        {
+            "weight": 1000,
+            "end": 55,
+            "linkType": "defaultWeightInterconnected",
+            "source": 53
+        },
+        {
+            "weight": 100,
+            "end": 27,
+            "linkType": "defaultWeight",
+            "source": 19
+        },
+        {
+            "weight": 100,
+            "end": 32,
+            "linkType": "defaultWeight",
+            "source": 29
+        },
+        {
+            "weight": 1000,
+            "end": 19,
+            "linkType": "defaultWeightInterconnected",
+            "source": 18
+        },
+        {
+            "weight": 1000,
+            "end": 1,
+            "linkType": "defaultWeightInterconnected",
+            "source": 0
+        },
+        {
+            "weight": 100,
+            "end": 31,
+            "linkType": "defaultWeight",
+            "source": 39
+        },
+        {
+            "weight": 100,
+            "end": 7,
+            "linkType": "defaultWeight",
+            "source": 15
+        },
+        {
+            "weight": 100,
+            "end": 58,
+            "linkType": "defaultWeight",
+            "source": 53
+        },
+        {
+            "weight": 100,
+            "end": 55,
+            "linkType": "defaultWeight",
+            "source": 63
+        },
+        {
+            "weight": 1000,
+            "end": 6,
+            "linkType": "defaultWeightInterconnected",
+            "source": 5
+        },
+        {
+            "weight": 100,
+            "end": 43,
+            "linkType": "defaultWeight",
+            "source": 51
+        },
+        {
+            "weight": 100,
+            "end": 33,
+            "linkType": "defaultWeight",
+            "source": 29
+        },
+        {
+            "weight": 1000,
+            "end": 5,
+            "linkType": "defaultWeightInterconnected",
+            "source": 7
+        },
+        {
+            "weight": 1000,
+            "end": 1,
+            "linkType": "defaultWeightInterconnected",
+            "source": 3
+        },
+        {
+            "weight": 1000,
+            "end": 31,
+            "linkType": "defaultWeightInterconnected",
+            "source": 30
+        },
+        {
+            "weight": 100,
+            "end": 10,
+            "linkType": "defaultWeight",
+            "source": 5
+        },
+        {
+            "weight": 1000,
+            "end": 2,
+            "linkType": "defaultWeightInterconnected",
+            "source": 4
+        },
+        {
+            "weight": 100,
+            "end": 18,
+            "linkType": "defaultWeight",
+            "source": 25
+        },
+        {
+            "weight": 100,
+            "end": 30,
+            "linkType": "defaultWeight",
+            "source": 35
+        },
+        {
+            "weight": 1000,
+            "end": 54,
+            "linkType": "defaultWeightInterconnected",
+            "source": 4
+        },
+        {
+            "weight": 1000,
+            "end": 0,
+            "linkType": "defaultWeightInterconnected",
+            "source": 1
+        },
+        {
+            "weight": 100,
+            "end": 7,
+            "linkType": "defaultWeight",
+            "source": 16
+        },
+        {
+            "weight": 100,
+            "end": 30,
+            "linkType": "defaultWeight",
+            "source": 37
+        },
+        {
+            "weight": 1000,
+            "end": 41,
+            "linkType": "defaultWeightInterconnected",
+            "source": 42
+        },
+        {
+            "weight": 1000,
+            "end": 1,
+            "linkType": "defaultWeightInterconnected",
+            "source": 2
+        },
+        {
+            "weight": 1000,
+            "end": 7,
+            "linkType": "defaultWeightInterconnected",
+            "source": 6
+        },
+        {
+            "weight": 100,
+            "end": 54,
+            "linkType": "defaultWeight",
+            "source": 60
+        },
+        {
+            "weight": 1000,
+            "end": 2,
+            "linkType": "defaultWeightInterconnected",
+            "source": 0
+        },
+        {
+            "weight": 100,
+            "end": 22,
+            "linkType": "defaultWeight",
+            "source": 17
+        },
+        {
+            "weight": 100,
+            "end": 17,
+            "linkType": "defaultWeight",
+            "source": 21
+        },
+        {
+            "weight": 1000,
+            "end": 3,
+            "linkType": "defaultWeightInterconnected",
+            "source": 0
+        },
+        {
+            "weight": 1000,
+            "end": 18,
+            "linkType": "defaultWeightInterconnected",
+            "source": 17
+        },
+        {
+            "weight": 100,
+            "end": 31,
+            "linkType": "defaultWeight",
+            "source": 40
+        },
+        {
+            "weight": 100,
+            "end": 54,
+            "linkType": "defaultWeight",
+            "source": 59
+        },
+        {
+            "weight": 1000,
+            "end": 30,
+            "linkType": "defaultWeightInterconnected",
+            "source": 2
+        },
+        {
+            "weight": 100,
+            "end": 18,
+            "linkType": "defaultWeight",
+            "source": 24
+        },
+        {
+            "weight": 100,
+            "end": 6,
+            "linkType": "defaultWeight",
+            "source": 13
+        },
+        {
+            "weight": 100,
+            "end": 13,
+            "linkType": "defaultWeight",
+            "source": 6
+        },
+        {
+            "weight": 1000,
+            "end": 54,
+            "linkType": "defaultWeightInterconnected",
+            "source": 53
+        },
+        {
+            "weight": 100,
+            "end": 54,
+            "linkType": "defaultWeight",
+            "source": 61
+        },
+        {
+            "weight": 100,
+            "end": 15,
+            "linkType": "defaultWeight",
+            "source": 7
+        },
+        {
+            "weight": 1000,
+            "end": 6,
+            "linkType": "defaultWeightInterconnected",
+            "source": 0
+        },
+        {
+            "weight": 100,
+            "end": 60,
+            "linkType": "defaultWeight",
+            "source": 54
+        }
+    ],
+    "info": {
+        "numHosts": 45,
+        "numSwitchs": 20,
+        "randomSeed": 1549750620662,
+        "numElementsPerInterconnectedLevel": [
+            5,
+            3
+        ],
+        "defaultWeightTree": 100,
+        "numNodes": 65,
+        "numLinks": 150,
+        "degreeOfInterconnection": 0.4000000059604645,
+        "numElementsPerTreeLevel": [3],
+        "defaultWeightInterconnected": 1000
+    }
+}

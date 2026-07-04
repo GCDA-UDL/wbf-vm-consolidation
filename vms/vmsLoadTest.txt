@@ -1,0 +1,6 @@
+- VM:
+    Cores: 1
+    CpuCapacity: [1000]
+    BandWidth: 1
+    DiskCapacity: 1
+    RAM: 870

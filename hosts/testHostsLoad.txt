@@ -1,0 +1,8 @@
+- Host:
+    Name: HP ProLiant ML110 G4
+    Cores: 1
+    CpuCapacity: [1000]
+    BandWidth: 1000000
+    DiskCapacity: 1000000
+    PowerModel: &id001 [86.0, 89.4, 92.6, 96.0, 99.5, 102.0, 106.0, 108.0, 112.0, 114.0, 117.0]
+    RAM: 4096000

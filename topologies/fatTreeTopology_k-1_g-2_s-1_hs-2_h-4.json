@@ -1,0 +1,146 @@
+{
+    "nodes": [
+        {
+            "id": 6,
+            "type": "LEAF"
+        },
+        {
+            "id": 4,
+            "type": "TREE"
+        },
+        {
+            "id": 7,
+            "type": "LEAF"
+        },
+        {
+            "id": 1,
+            "type": "TREE"
+        },
+        {
+            "id": 2,
+            "type": "TREE"
+        },
+        {
+            "id": 3,
+            "type": "TREE"
+        },
+        {
+            "id": 8,
+            "type": "LEAF"
+        },
+        {
+            "id": 5,
+            "type": "LEAF"
+        },
+        {
+            "id": 0,
+            "type": "CENTRAL"
+        }
+    ],
+    "links": [
+        {
+            "weight": 100,
+            "end": 3,
+            "linkType": "defaultWeight",
+            "source": 6
+        },
+        {
+            "weight": 1000,
+            "end": 1,
+            "linkType": "defaultWeightInterconnected",
+            "source": 3
+        },
+        {
+            "weight": 1000,
+            "end": 2,
+            "linkType": "defaultWeightInterconnected",
+            "source": 4
+        },
+        {
+            "weight": 1000,
+            "end": 0,
+            "linkType": "defaultWeightInterconnected",
+            "source": 2
+        },
+        {
+            "weight": 1000,
+            "end": 1,
+            "linkType": "defaultWeightInterconnected",
+            "source": 0
+        },
+        {
+            "weight": 100,
+            "end": 8,
+            "linkType": "defaultWeight",
+            "source": 4
+        },
+        {
+            "weight": 1000,
+            "end": 4,
+            "linkType": "defaultWeightInterconnected",
+            "source": 2
+        },
+        {
+            "weight": 100,
+            "end": 5,
+            "linkType": "defaultWeight",
+            "source": 3
+        },
+        {
+            "weight": 1000,
+            "end": 0,
+            "linkType": "defaultWeightInterconnected",
+            "source": 1
+        },
+        {
+            "weight": 100,
+            "end": 6,
+            "linkType": "defaultWeight",
+            "source": 3
+        },
+        {
+            "weight": 1000,
+            "end": 2,
+            "linkType": "defaultWeightInterconnected",
+            "source": 0
+        },
+        {
+            "weight": 100,
+            "end": 7,
+            "linkType": "defaultWeight",
+            "source": 4
+        },
+        {
+            "weight": 100,
+            "end": 3,
+            "linkType": "defaultWeight",
+            "source": 5
+        },
+        {
+            "weight": 1000,
+            "end": 3,
+            "linkType": "defaultWeightInterconnected",
+            "source": 1
+        },
+        {
+            "weight": 100,
+            "end": 4,
+            "linkType": "defaultWeight",
+            "source": 7
+        },
+        {
+            "weight": 100,
+            "end": 4,
+            "linkType": "defaultWeight",
+            "source": 8
+        }
+    ],
+    "info": {
+        "numHosts": 4,
+        "numSwitchs": 5,
+        "defaultWeightTree": 100,
+        "numNodes": 9,
+        "numLinks": 16,
+        "defaultWeightInterconnected": 1000
+    }
+}

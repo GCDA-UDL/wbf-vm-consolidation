@@ -1,0 +1,54 @@
+- VM:
+    Cores: 1
+    CpuCapacity: [100]
+    BandWidth: 1
+    DiskCapacity: 1
+    RAM: 1
+- VM:
+    Cores: 1
+    CpuCapacity: [250]
+    BandWidth: 1
+    DiskCapacity: 1
+    RAM: 1
+- VM:
+    Cores: 1
+    CpuCapacity: [500]
+    BandWidth: 1
+    DiskCapacity: 1
+    RAM: 1
+- VM:
+    Cores: 1
+    CpuCapacity: [750]
+    BandWidth: 1
+    DiskCapacity: 1
+    RAM: 1
+- VM:
+    Cores: 1
+    CpuCapacity: [1000]
+    BandWidth: 1
+    DiskCapacity: 1
+    RAM: 1
+- VM:
+    Cores: 1
+    CpuCapacity: [1500]
+    BandWidth: 1
+    DiskCapacity: 1
+    RAM: 1
+- VM:
+    Cores: 1
+    CpuCapacity: [2000]
+    BandWidth: 1
+    DiskCapacity: 1
+    RAM: 1
+- VM:
+    Cores: 1
+    CpuCapacity: [2500]
+    BandWidth: 1
+    DiskCapacity: 1
+    RAM: 1
+- VM:
+    Cores: 1
+    CpuCapacity: [3000]
+    BandWidth: 1
+    DiskCapacity: 1
+    RAM: 1

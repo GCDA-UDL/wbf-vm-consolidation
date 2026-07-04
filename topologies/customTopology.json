@@ -1,0 +1,42 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "type": "CENTRAL"
+        },
+        {
+            "id": 1,
+            "type": "LEAF"
+        },
+        {
+            "id": 2,
+            "type": "LEAF"
+        }
+    ],
+    "links": [
+        {
+            "weight": 1000,
+            "end": 1,
+            "linkType": "defaultWeightInterconnected",
+            "source": 0
+        },
+        {
+            "weight": 1000,
+            "end": 2,
+            "linkType": "defaultWeightInterconnected",
+            "source": 0
+        }
+    ],
+    "info": {
+        "numHosts": 2,
+        "numSwitchs": 1,
+        "randomSeed": 1549750681529,
+        "numElementsPerInterconnectedLevel": [3],
+        "defaultWeightTree": 100,
+        "numNodes": 3,
+        "numLinks": 2,
+        "degreeOfInterconnection": 0.4000000059604645,
+        "numElementsPerTreeLevel": [3],
+        "defaultWeightInterconnected": 1000
+    }
+}

@@ -1,0 +1,35 @@
+- Host:
+    Name: Fujitsu M1
+    Cores: 4
+    CpuCapacity: [2700, 2700, 2700, 2700]
+    BandWidth: 1000000
+    DiskCapacity: 1000000
+    PowerModel: &id001 [13.3, 18.3, 21.1, 23.4, 26.5, 29.6, 34.7, 40.7, 46.8, 57.4, 60]
+    RAM: 8192000
+
+- Host:
+    Name: Fujitsu M3
+    Cores: 4
+    CpuCapacity: [3500, 3500, 3500, 3500]
+    BandWidth: 1000000
+    DiskCapacity: 1000000
+    PowerModel: &id001 [12.4, 16.7, 19.4, 21.4, 23.4, 26.1, 29.7, 34.8, 41, 47.1, 51.2]
+    RAM: 8192000
+
+- Host:
+    Name: Hitachi TS10
+    Cores: 4
+    CpuCapacity: [3500, 3500, 3500, 3500]
+    BandWidth: 1000000
+    DiskCapacity: 1000000
+    PowerModel: &id001 [37, 39.9, 43.2, 45.5, 48.8, 52.8, 57.8, 65.1, 73.8, 80.8, 85.2]
+    RAM: 8192000
+
+- Host:
+    Name: Hitachi SS10
+    Cores: 4
+    CpuCapacity: [3600, 3600, 3600, 3600]
+    BandWidth: 1000000
+    DiskCapacity: 1000000
+    PowerModel: &id001 [36, 38.8, 41.2, 43.7, 46.3, 49.4, 53.1, 58.8, 64.2, 67, 69.7]
+    RAM: 8192000

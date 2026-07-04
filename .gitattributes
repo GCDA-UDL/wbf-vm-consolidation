@@ -1,0 +1,13 @@
+# The simulator jar is committed directly (< 100 MB) so a plain `git clone`
+# fetches everything — no Git LFS install and no LFS bandwidth quota needed.
+
+# Force LF for files executed inside the Linux container (Windows clones must not get CRLF)
+*.sh        text eol=lf
+Dockerfile  text eol=lf
+Dockerfile.neural text eol=lf
+docker-compose.yml text eol=lf
+*.py        text eol=lf
+launcher.json text eol=lf
+
+# Treat the jar as binary
+*.jar       binary

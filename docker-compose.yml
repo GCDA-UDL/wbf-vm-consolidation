@@ -1,0 +1,32 @@
+# MetaCloudSim — Paper 4 reproduction (standalone)
+#
+# The image provides the toolchain (Java 8 + Python 3.8 + Facebook Prophet + jpy).
+# The repository is mounted at /workspace, so the jar, configs, workloads and
+# pymodule all come from your clone. Results are written to ./results.
+#
+#   docker compose build                       # build the image (first time, ~10 min)
+#   docker compose run --rm sim                 # default: PlanetLab (WBF + Prophet)
+#   docker compose run --rm sim java -jar metacloud.jar testbed paper4_full_alibaba_prophet
+#   docker compose up jupyter                   # analysis notebooks at http://localhost:8888
+
+services:
+  sim:
+    build: .
+    image: metacloudsim
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    # 'testbed' expands the config into per-seed runs; 'folder' executes them.
+    command: bash -c "java -jar metacloud.jar testbed paper4_full_planetlab_prophet && java -jar metacloud.jar folder paper4_full_planetlab_prophet"
+
+  jupyter:
+    build: .
+    image: metacloudsim
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    ports:
+      - "8888:8888"
+    command: >
+      jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+      --NotebookApp.token='' python/notebooks
