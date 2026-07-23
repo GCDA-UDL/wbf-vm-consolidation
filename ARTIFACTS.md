@@ -14,7 +14,7 @@ simulation campaign are **not** stored in git. They are archived as a single com
 <!-- Fill in the shared-cloud link and, after the release, the Zenodo record: -->
 - **Shared cloud (group):** `<PASTE_ONEDRIVE_OR_SHARED_LINK_HERE>`
 - **Zenodo (permanent):** the code release is archived at DOI
-  [10.5281/zenodo.21197525](https://doi.org/10.5281/zenodo.21197525).
+  [10.5281/zenodo.21197524](https://doi.org/10.5281/zenodo.21197524).
 
 ## Do I need it?
 
