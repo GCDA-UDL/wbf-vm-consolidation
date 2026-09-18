@@ -1,21 +1,21 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite both the article (preferred-citation) and this software."
-title: "WBF — Network-Aware VM Consolidation with Facebook Prophet (reproduction package)"
+title: "Virtual Machine Consolidation in Cloud Computing Using Prophet's Forecasting Tool (reproduction package)"
 abstract: >-
-  Self-contained Docker reproduction package for WBF (WPSP + Bollinger Bands + Facebook Prophet),
+  Self-contained Docker reproduction package for WBP (WPSP + Bollinger Bands + Prophet),
   a network-aware proactive virtual-machine consolidation method for cloud data centers, built on
   CloudSim/MetaCloudSim. Includes the simulator, experiment configurations, 100-VM workload
   subsets (PlanetLab, Alibaba 2018, Materna, Microsoft Azure 2019), forecasting code and analysis
   notebooks, plus the AMOVMC and EUQ-VMC (2025) baselines reproduced in the same simulator.
 type: software
-version: 0.2.0
+version: 0.2.2
 date-released: 2026-07-04
 license: MIT
 repository-code: "https://github.com/GCDA-UDL/wbf-vm-consolidation"
 keywords:
   - cloud computing
   - virtual machine consolidation
-  - Facebook Prophet
+  - Prophet
   - Bollinger Bands
   - CloudSim
   - energy efficiency
