@@ -8,7 +8,7 @@ abstract: >-
   subsets (PlanetLab, Alibaba 2018, Materna, Microsoft Azure 2019), forecasting code and analysis
   notebooks, plus the AMOVMC and EUQ-VMC (2025) baselines reproduced in the same simulator.
 type: software
-version: 0.1.0
+version: 0.2.0
 date-released: 2026-07-04
 license: MIT
 repository-code: "https://github.com/GCDA-UDL/wbf-vm-consolidation"
@@ -23,15 +23,15 @@ keywords:
   - service level agreement
   - VM migration
 authors:
-  - given-names: Sergi
-    family-names: Vila
-    orcid: "https://orcid.org/0000-0002-4536-5025"
-    affiliation: "Department of Computer Engineering and Digital Design, University of Lleida"
   - given-names: Vitor Luiz
     family-names: da Silva Verbel
     orcid: "https://orcid.org/0000-0002-3296-2752"
     affiliation: "Department of Computer Engineering and Digital Design, University of Lleida"
     email: vitor.dasilva@udl.cat
+  - given-names: Sergi
+    family-names: Vila
+    orcid: "https://orcid.org/0000-0002-4536-5025"
+    affiliation: "Department of Computer Engineering and Digital Design, University of Lleida"
   - given-names: Rosa Ana
     family-names: Tomás
     orcid: "https://orcid.org/0000-0002-1995-3974"
@@ -58,15 +58,15 @@ authors:
     affiliation: "Department of Computer Engineering and Digital Design, University of Lleida"
 preferred-citation:
   type: article
-  title: "Virtual Machine Consolidation in Cloud Computing based on Facebook Prophet Forecasting Neural-Network"
+  title: "Virtual Machine Consolidation in Cloud Computing Using Prophet's Forecasting Tool"
   notes: "Manuscript in preparation."
   authors:
-    - given-names: Sergi
-      family-names: Vila
-      orcid: "https://orcid.org/0000-0002-4536-5025"
     - given-names: Vitor Luiz
       family-names: da Silva Verbel
       orcid: "https://orcid.org/0000-0002-3296-2752"
+    - given-names: Sergi
+      family-names: Vila
+      orcid: "https://orcid.org/0000-0002-4536-5025"
     - given-names: Rosa Ana
       family-names: Tomás
       orcid: "https://orcid.org/0000-0002-1995-3974"
