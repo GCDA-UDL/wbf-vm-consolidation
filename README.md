@@ -8,7 +8,7 @@ Reproducible code, configurations and analysis for the paper:
 
 > **Virtual Machine Consolidation in Cloud Computing Using Prophet's Forecasting Tool**.
 
-**Authors:** Vitor Luiz da Silva, Sergi Vila, Rosa Ana Tomás, Concepció Roig, Francesc Giné,
+**Authors:** Vitor L. da Silva, Sergi Vila, Rosa Ana Tomás, Concepció Roig, Francesc Giné,
 Fernando Cores, Josep L. Lérida, Fernando Guirado — SEMBAC, University of Lleida (UdL), Spain.
 
 The proposed method, **WBP = WPSP + Bollinger Bands + Prophet** (formerly named WBF; the
@@ -142,4 +142,4 @@ The original code, configurations and documentation in this repository are relea
 Prophet and other dependencies inside `metacloud.jar` and the Docker image) retain their own
 licenses — see [THIRD_PARTY.md](THIRD_PARTY.md).
 
-**Contact:** Dr. Vitor Luiz da Silva Verbel — vitor.dasilva@udl.cat
+**Contact:** Dr. Vitor L. da Silva — vitor.dasilva@udl.cat
