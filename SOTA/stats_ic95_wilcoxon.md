@@ -1,5 +1,7 @@
 # Revised SOTA statistics — mean ± 95% CI + paired Wilcoxon (Holm-corrected, with direction)
 
+> **Superseded (revision of November 2026).** Statistics of the submitted version: composite energy as then defined, 48 tests, PlanetLab tested on 300 runs as if they were independent, BB+NeoPro outside the family. The revision uses one family of 360 tests (WBP against each of the other nine techniques, ten metrics, four workloads), with PlanetLab tested on the ten daily means: `results/reference/stats.md`. `WF` and `WBF` in this file are WP and WBP.
+
 Every metric is **lower-is-better**. Wilcoxon paired by common random seed (PlanetLab keyed by (trace,seed), n=300; others n=30). p-values are Holm-Bonferroni corrected over all 48 tests. 'dir' = which technique wins (lower).
 
 

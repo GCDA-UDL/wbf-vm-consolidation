@@ -6,3 +6,7 @@ FROM metacloudsim
 
 # NeuralProphet 0.2.7 + torch 1.6.0 (versiones del requirements original, py3.8)
 RUN python3.8 -m pip install 'neuralprophet==0.2.7' 'torch==1.6.0'
+
+# Same single-thread setting as the base image (repeated here in case the base image was built
+# from a version of the Dockerfile that did not set it).
+ENV OMP_NUM_THREADS=1 STAN_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1

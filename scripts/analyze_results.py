@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+# ------------------------------------------------------------------------------------------------
+# Analysis of the SUBMITTED version of the manuscript (24 September 2026). Superseded by
+# analysis_revision/ (see SOTA/README.md). This script uses the composite energy of that version:
+# host energy + (4.096 * RAMinBW + 20.165) * 1.1 / 3.6e6 kWh, with RAMinBW as registered by the
+# simulator, which counts every migration twice. Kept for traceability of the submitted tables.
+# In its labels and comments WF is WP and WBF is WBP.
+# ------------------------------------------------------------------------------------------------
 """
 Aggregate the per-seed results (_data.json) of the Paper 4 experiments into per
 (workload, technique) averages, compute the composite metrics and write a JSON summary.

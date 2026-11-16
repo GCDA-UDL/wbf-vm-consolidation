@@ -1,4 +1,6 @@
-# FAIR SOTA comparison (composite energy) — FOR REVIEW, not yet in the paper
+# SOTA comparison under shared and native placement (composite energy of the submitted version)
+
+> **Status (revision of November 2026).** This analysis is now part of the manuscript (table of AMOVMC and EUQ-VMC with their own placement stage). The values below use the composite energy of the submitted version (migration traffic as registered by the simulator, 4.096 J per MB, factor 1.1); the values of the revised manuscript are in `results/reference/README.md`. `WBF` in this file is WBP. The native placement of EUQ-VMC is a greedy placement on a weighted sum of its three objectives; its MOFPA/D search is not implemented.
 
 Competitors under their NATIVE configuration vs. the shared placement, plus their own ESV = Energy x SLA metric. Mean $\pm$ 95% CI. Lower is better on all columns.
 

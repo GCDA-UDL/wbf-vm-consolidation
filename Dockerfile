@@ -42,6 +42,11 @@ ENV JDL_LIB=/usr/local/lib/python3.8/dist-packages/jdl.cpython-38-x86_64-linux-g
 # libpython must be preloaded so the JVM can start the embedded Python (jpy)
 ENV LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libpython3.8.so.1.0
 
+# Single-threaded numerical back-ends (Prophet/Stan, BLAS), so that every campaign runs under the
+# same conditions. Before this line was added (v0.2.3 and earlier) only scripts/run_np_campaign.sh
+# and scripts/run_np_resume.sh exported these variables. Override with `docker run -e VAR=n`.
+ENV OMP_NUM_THREADS=1 STAN_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+
 # Copiar pymodule Python (forecasting: Prophet, AutoARIMA, KNN, Bollinger)
 # Path local: networkExperiments/svila_phd_metacloudsim/cloudsim/src/main/python
 # (montar via docker-compose volume, o COPY si build standalone)

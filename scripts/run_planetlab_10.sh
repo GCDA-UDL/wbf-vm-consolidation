@@ -1,7 +1,9 @@
 #!/bin/bash
-# Full PlanetLab 10-trace reproduction (Table 6).
-# Loops the 10 CloudSim days; each config runs 30 seeds x 2 signals (none=WF,
-# bollinger=WBF) with Facebook Prophet. testbed expands -> folder executes.
+# Full PlanetLab 10-trace run (PlanetLab table of the manuscript).
+# Loops the 10 CloudSim days; each config runs 30 seeds x 2 signals (none = WP,
+# bollinger = WBP; formerly WF / WBF) with Facebook Prophet. testbed expands -> folder executes.
+# The tables of the manuscript read the folders p4_pl_<day>_st, produced by the configs of the
+# same name (identical to p4_pl_<day> except for the name): see REPRODUCE.md.
 # Usage (inside container):  bash scripts/run_planetlab_10.sh [day ...]
 set -u
 cd /workspace

@@ -5,7 +5,9 @@ import glob
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-inputFolder = "C:\\Users\\Sergi\\Documents\\networkExperiments\\workloads\\"
+# Workloads folder, relative to the working directory (the repository root in the container).
+# Only the helper MaternaWorkloadLoader.getTraces() below uses it.
+inputFolder = "workloads/"
 
 def get_bollinger(ser, winma=10, alpha=2):
     ma = ser.rolling(winma).mean()

@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+# ------------------------------------------------------------------------------------------------
+# Analysis of the SUBMITTED version of the manuscript (24 September 2026). Superseded by
+# analysis_revision/ (see SOTA/README.md). This script uses the composite energy of that version:
+# host energy + (4.096 * RAMinBW + 20.165) * 1.1 / 3.6e6 kWh, with RAMinBW as registered by the
+# simulator, which counts every migration twice. Kept for traceability of the submitted tables.
+# In its labels and comments WF is WP and WBF is WBP.
+# ------------------------------------------------------------------------------------------------
 """SOTA comparison table from this repo's output/ folder (run after the SOTA configs).
 Portable: reads ./output relative to the repo root. Usage:  python SOTA/compare_sota.py
 Prints WF / WBF / AMOVMC / EUQ-VMC on PlanetLab (10 traces x 30 seeds), efficiency-first."""

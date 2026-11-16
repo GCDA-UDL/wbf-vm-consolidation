@@ -5,7 +5,10 @@ import numpy as np
 import plotly.graph_objects as go
 import random
 
-rootPath = "C:/Users/Sergi/Documents/networkExperiments/workloads/"
+# Workloads folder: <working directory>/workloads by default (the repository root in the container);
+# override with the environment variable WBF_WORKLOADS. Only the loader helpers below use it; the
+# functions that the simulator calls (signalProcessing.py, forecastingTechniques.py) do not.
+rootPath = os.environ.get("WBF_WORKLOADS", "workloads").rstrip("/\\") + "/"
 
 def getWorkloads():
     return glob.glob(rootPath+"*")

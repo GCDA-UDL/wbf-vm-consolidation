@@ -1,4 +1,6 @@
-# Rebuilt Tables 6-9 (single reproduction environment) — mean ± 95% CI
+# Per-workload tables of the submitted version (earlier numbering: Tables 6-9) — mean ± 95% CI
+
+> **Tables of the submitted version (24 September 2026).** Composite energy as then defined; "RAM-in-BW" is the migration traffic as registered by the simulator, which counts each migration twice. Superseded by `results/reference/README.md`. `WF` and `WBF` are WP and WBP.
 
 
 ## Planetlab

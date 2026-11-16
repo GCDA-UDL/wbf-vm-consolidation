@@ -10,7 +10,11 @@ import svila.planetlabNetwork.StaticResources;
  * (Goyal &amp; Awasthi, "Adaptive Multi-Objective Virtual Machine Consolidation
  * for Energy-Efficient Cloud Data Centers", J. Grid Computing 23:21, 2025).
  *
- * Faithful re-implementation of the predictor in Section 4.1 of that paper:
+ * Partial re-implementation of the predictor in Section 4.1 of that paper. The
+ * article combines its weighted moving average with a one-layer neural network
+ * predictor; that network is not implemented here. The forecast below is the weighted
+ * moving average combined with the last observed value, computed on the history it is
+ * given (for the host forecast, the aggregate utilisation history of the host):
  *   - Algorithm 1: Dynamic Window Size adjustment. The window size ws in [3,30]
  *     is the one that minimises the absolute error between the WMA prediction
  *     and the last actual observation.
@@ -19,9 +23,10 @@ import svila.planetlabNetwork.StaticResources;
  *     prints the normaliser as ws*(ws-1)/2; the algebraically correct sum of the
  *     weights ws+(ws-1)+...+1 is ws*(ws+1)/2, which is what we use so the weights
  *     sum to one (documented deviation - apparent typo in the source paper).
- *   - Equations (18)-(19): final prediction PM_util = w1*P_next + w2*A_prev, with
- *     w1,w2 the normalised accuracies (over the last 10 steps) of the WMA
- *     prediction vs. the persistence (last value) baseline.
+ *   - Equations (18)-(19), as implemented: final prediction PM_util = w1*P_next + w2*A_prev,
+ *     with w1,w2 the normalised accuracies (over the last 10 steps) of the WMA
+ *     prediction vs. the persistence (last value) baseline; the last value takes the
+ *     place of the neural predictor of the article.
  *
  * The forecaster is registered as "dwma" in {@link ForecastingTechniqueFactory}
  * and is selected through the experiment config (hostForecastingTechnique /

@@ -1,10 +1,19 @@
 #!/usr/bin/env python3
-"""FINAL bit-reproducible SOTA comparison (single-thread Stan) across the 4 workloads.
-WF/WBF read from the _st (single-thread) re-run; AMOVMC/EUQ-VMC use dwma (already deterministic).
-Also reports WF/WBF single-thread vs the earlier multi-thread run, to quantify the change."""
+# ------------------------------------------------------------------------------------------------
+# Analysis of the SUBMITTED version of the manuscript (24 September 2026). Superseded by
+# analysis_revision/ (see SOTA/README.md). Kept for traceability. Individual runs are not
+# reproduced value by value when the campaign is executed again (results/reference/README.md).
+# In its labels and comments WF is WP and WBF is WBP.
+# ------------------------------------------------------------------------------------------------
+"""SOTA comparison of the submitted version (single-thread Stan) across the 4 workloads.
+WF/WBF read from the _st (single-thread) re-run; AMOVMC/EUQ-VMC do not use Prophet.
+Also reports WF/WBF single-thread vs the earlier multi-thread run, to quantify the change.
+An earlier text of this docstring called these runs bit-reproducible. They are not: individual
+runs are not reproducible bit for bit, for any technique (results/reference/README.md)."""
 import glob, json, os, statistics as st
 
-OUT = r"C:\Users\PcVIP\Desktop\_publish_vmcons\output"
+# Raw outputs: <repository>/output by default; override with the environment variable WBF_OUTPUT.
+OUT = os.environ.get("WBF_OUTPUT", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "output"))
 DAYS = ["20110303", "20110306", "20110309", "20110322", "20110325",
         "20110403", "20110409", "20110411", "20110412", "20110420"]
 
@@ -59,7 +68,7 @@ HDR = f"{'Technique':22}{'n':>4}{'Energy':>9}{'SLA%':>8}{'migr':>9}{'ESV':>9}{'R
 
 for wl in ["planetlab", "alibaba", "materna", "azure"]:
     print("=" * 70)
-    print(f"  {wl.upper()}  (WF/WBF single-thread = bit-reproducible)")
+    print(f"  {wl.upper()}  (WF/WBF single-thread)")
     print("=" * 70)
     print(HDR); print("-" * 70)
     wf, wbf = wf_wbf(wl, "_st")

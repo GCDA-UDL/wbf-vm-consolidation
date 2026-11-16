@@ -75,7 +75,7 @@ public class FutureHostOverSaturationPolicyFactory {
         	case "ef":
         		FutureHostOverSaturationEverFalse ef = new FutureHostOverSaturationEverFalse();
         		return ef;
-        	case "amovmc": // SOTA: AMOVMC MWOHD (Goyal & Awasthi 2025, Eq. 11). gamma=0.80 (500ms SLA point)
+        	case "amovmc": // SOTA: AMOVMC MWOHD (Goyal & Awasthi 2025, Eq. 11). gamma=0.80, set by the authors of this package (the article reports no value)
         		return new FutureHostOverSaturationAMOVMC(0.80);
         	case "amovmcg": // SOTA tuning variant: AMOVMC MWOHD with gamma read from config 'parameter'
         		return new FutureHostOverSaturationAMOVMC(safetyParameter);

@@ -1,5 +1,7 @@
 # Facebook Prophet vs. NeuralProphet
 
+> **Status (revision of November 2026).** Exploratory run made before the campaign of the manuscript. It is not the comparison reported in the revised manuscript. That comparison is the BB+NeoPro campaign (`testbed/np_*_st.json`, `scripts/run_np_campaign.sh`; 13 traces × 30 seeds); BB+NeoPro is the WBP loop with the NeuralProphet forecaster in place of Prophet, not the 2023 method as published. In that campaign none of the differences between WBP and BB+NeoPro is statistically significant on Alibaba, Materna and Azure, and on PlanetLab BB+NeoPro uses less total energy with higher SLA violations (`results/reference/README.md`, `results/reference/stats.md`). The statements and the explanation below were not re-verified. WP and WBP were called WF and WBF when this note was written.
+
 ## Question
 Would a deep-learning forecaster — **NeuralProphet** (Triebe et al., 2021), which augments the
 Prophet decomposition with auto-regressive neural modules — improve the consolidation over standard
@@ -7,16 +9,16 @@ Prophet decomposition with auto-regressive neural modules — improve the consol
 
 ## Design
 Keeping everything else fixed (same workloads, seeds, policies), only the host forecaster is
-replaced (`fbProphet` → `neuralProphet`) and WF and WBF are re-run on the four workloads:
-- WF  = WPSP + forecaster, **without** Bollinger
-- WBF = WPSP + forecaster, **with** Bollinger (5, 0.5)
+replaced (`fbProphet` → `neuralProphet`) and WP and WBP are re-run on the four workloads:
+- WP  = WPSP + forecaster, **without** Bollinger
+- WBP = WPSP + forecaster, **with** Bollinger (5, 0.5)
 
 Config: `../../testbed/exp_neuralprophet.json` · image: `Dockerfile.neural` (torch 1.6 +
 neuralprophet 0.2.7). Analysis: `compare_fp_np.py`.
 
 ## Result — number of migrations (lower is better)
 
-| Workload | WF · FP | WF · NP | WBF · FP | WBF · NP |
+| Workload | WP · FP | WP · NP | WBP · FP | WBP · NP |
 |----------|--------:|--------:|---------:|---------:|
 | PlanetLab | **281** | 353 | **300** | 332 |
 | Alibaba   | **314** | 432 | **369** | 434 |

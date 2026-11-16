@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+# ------------------------------------------------------------------------------------------------
+# Analysis of the SUBMITTED version of the manuscript (24 September 2026). Superseded by
+# analysis_revision/ (see SOTA/README.md). Kept for traceability. Individual runs are not
+# reproduced value by value when the campaign is executed again (results/reference/README.md).
+# In its labels and comments WF is WP and WBF is WBP.
+# ------------------------------------------------------------------------------------------------
 """SOTA comparison extended to all workloads (Guirado request).
 Per workload: WF / WBF (re-run here) vs AMOVMC / EUQ-VMC (shared + native placement),
 all in the same simulator/energy/SLA/network model. Also compares the re-run WF/WBF
@@ -6,7 +12,8 @@ against the values published in the paper to check reproducibility drift.
 Metrics: Energy(kWh), SLA(%), #migrations, ESV(=E*SLA), RAM-in-BW(x1e5). Lower is better."""
 import glob, json, os, statistics as st
 
-OUT = r"C:\Users\PcVIP\Desktop\_publish_vmcons\output"
+# Raw outputs: <repository>/output by default; override with the environment variable WBF_OUTPUT.
+OUT = os.environ.get("WBF_OUTPUT", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "output"))
 
 # Published paper values (tab:materna_results, tab:azure_results_v2): E, SLA%, migr, ESV, RAMbw
 PAPER = {

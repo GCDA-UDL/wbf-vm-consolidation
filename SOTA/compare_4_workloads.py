@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
+# ------------------------------------------------------------------------------------------------
+# Analysis of the SUBMITTED version of the manuscript (24 September 2026). Superseded by
+# analysis_revision/ (see SOTA/README.md). Kept for traceability. Individual runs are not
+# reproduced value by value when the campaign is executed again (results/reference/README.md).
+# In its labels and comments WF is WP and WBF is WBP.
+# ------------------------------------------------------------------------------------------------
 """SOTA comparison across ALL 4 workloads (Guirado request): PlanetLab, Alibaba, Materna, Azure.
 Per workload: WF / WBF (re-run) vs AMOVMC / EUQ-VMC (shared + native), same simulator/model.
 Plus re-run-vs-paper reproducibility check. Metrics: Energy(kWh), SLA(%), #migr, ESV(=E*SLA), RAMbw(x1e5)."""
 import glob, json, os, statistics as st
 
-OUT = r"C:\Users\PcVIP\Desktop\_publish_vmcons\output"
+# Raw outputs: <repository>/output by default; override with the environment variable WBF_OUTPUT.
+OUT = os.environ.get("WBF_OUTPUT", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "output"))
 DAYS = ["20110303", "20110306", "20110309", "20110322", "20110325",
         "20110403", "20110409", "20110411", "20110412", "20110420"]
 

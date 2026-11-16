@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+# ------------------------------------------------------------------------------------------------
+# Analysis of the SUBMITTED version of the manuscript (24 September 2026). Superseded by
+# analysis_revision/ (see SOTA/README.md). This script uses the composite energy of that version:
+# host energy + (4.096 * RAMinBW + 20.165) * 1.1 / 3.6e6 kWh, with RAMinBW as registered by the
+# simulator, which counts every migration twice. Kept for traceability of the submitted tables.
+# In its labels and comments WF is WP and WBF is WBP.
+# ------------------------------------------------------------------------------------------------
 """Rebuild the per-workload Tables 6-9 (MU/MMT/RS/MC/WPSP/WF/WBF) under the SINGLE
 reproduction environment, so they are internally consistent with Table 10 (same
 WBF numbers). Classical baselines come from the *_static reconciliation campaign;
@@ -8,7 +15,8 @@ import glob, json, os
 import numpy as np
 from scipy import stats
 
-OUT = r"C:\Users\PcVIP\Desktop\_publish_vmcons\output"
+# Raw outputs: <repository>/output by default; override with the environment variable WBF_OUTPUT.
+OUT = os.environ.get("WBF_OUTPUT", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "output"))
 HERE = os.path.dirname(os.path.abspath(__file__))
 DAYS = ["20110303", "20110306", "20110309", "20110322", "20110325",
         "20110403", "20110409", "20110411", "20110412", "20110420"]

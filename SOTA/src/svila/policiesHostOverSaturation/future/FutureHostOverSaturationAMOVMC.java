@@ -25,7 +25,7 @@ import svila.policiesVmOptimizer.future.FutureHost;
  * <p>To keep the detection consistent with the migration-selection loop of the
  * "future" pipeline — which migrates VMs while {@code futureUtilization &gt;
  * upperThreshold} (see {@code FutureVmSelectionBase.getVmsToMigrateWithFirstCheck})
- * — we invert Eq. 11 at the performance point gamma to obtain the equivalent
+ * — we invert Eq. 11 at the performance point gamma to obtain a
  * <em>utilisation</em> threshold u_crit (the utilisation at which performance == gamma):</p>
  *
  * <pre>
@@ -34,15 +34,19 @@ import svila.policiesVmOptimizer.future.FutureHost;
  * </pre>
  *
  * <p>The host is over-utilised iff forecasted utilisation &gt; u_crit, and the
- * selection loop migrates VMs until utilisation falls back below u_crit. This is
- * mathematically equivalent to the performance test u_th &lt; gamma while reusing
- * the unchanged consolidation loop, so AMOVMC runs in the same CloudSim
- * energy/SLA harness as the baselines and WBF.</p>
+ * selection loop migrates VMs until utilisation falls back below u_crit. This reuses
+ * the unchanged consolidation loop, so AMOVMC runs in the same CloudSim energy/SLA
+ * harness as the baselines and WBF, but it is NOT equivalent to the performance test
+ * u_th &lt; gamma: Eq. 11 is discontinuous at u_j = 0.80, and when the low-load branch
+ * gives u_crit &gt; 0.80 the high-load branch gives a threshold below 0.80. At
+ * gamma = 0.80 this happens for hosts with one or two VMs (u_crit = 0.64 instead of
+ * 0.80); in the gamma sweep (configs amovmc_tune_*) it affects many more host sizes.</p>
  */
 public class FutureHostOverSaturationAMOVMC extends FutureHostOverSaturationBase {
 
 	/** QoS performance threshold gamma (Eq. 11). Performance below gamma => overloaded.
-	 *  The paper ties this to the 500 ms response-time SLA point (performance ~0.80). */
+	 *  The AMOVMC article does not report a value for gamma; the value used in this package
+	 *  (0.80, see FutureHostOverSaturationPolicyFactory) was set by the authors of the package. */
 	private final double gamma;
 
 	public FutureHostOverSaturationAMOVMC(double gamma) {

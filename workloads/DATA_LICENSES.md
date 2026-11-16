@@ -7,16 +7,15 @@ sources below. If you need the full traces, download them from the official repo
 
 | Workload | Subset included | Original source | License / terms |
 |----------|-----------------|-----------------|-----------------|
-| **PlanetLab** | `planetlab/planetlab_20110303_100_mostDiff` | PlanetLab CoMon CPU traces, as distributed with **CloudSim** (Beloglazov & Buyya) | Academic use; bundled with CloudSim examples |
+| **PlanetLab** | `planetlab/planetlab_<day>_100_mostDiff` (ten days, 20110303 … 20110420) | PlanetLab CoMon CPU traces, as distributed with **CloudSim** (Beloglazov & Buyya) | Academic use; bundled with CloudSim examples |
 | **Alibaba 2018** | `alibaba2018/alibaba2018_fixed_first_500_100_mostDiff` | **Alibaba Cluster Trace v2018** — https://github.com/alibaba/clusterdata | Per Alibaba terms (academic use + citation) |
 | **Materna** | `materna/materna_trace1_valid_0_288_100_mostDiff` | **Materna / GWA-T-13** (Grid Workloads Archive) — http://gwa.ewi.tudelft.nl | Per GWA terms (academic use + citation) |
 | **Azure 2019** | `azure/azure_azure2019_traces_100_mostDiff` | **Microsoft Azure Public Dataset v2** — https://github.com/Azure/AzurePublicDataset | Per Microsoft Azure dataset license |
 
 ## Notes
-- These are **derived subsets** (100 VMs each, ~8 MB total), not the full datasets.
-- PlanetLab Table 6 in the paper averages **10 daily traces** (20110303 … 20110420); only the
-  `20110303` trace is shipped here. Add the remaining PlanetLab traces from CloudSim for the exact
-  PlanetLab averages.
+- These are **derived subsets** (100 VMs each, about 14 MB in total), not the full datasets.
+- The PlanetLab table of the manuscript averages **10 daily traces** (20110303 … 20110420); the ten
+  subsets are shipped here.
 - If any rights holder objects to the redistribution of a subset, open an issue and it will be
   replaced by a download script.
 

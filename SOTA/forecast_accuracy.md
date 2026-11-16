@@ -1,5 +1,7 @@
 # Forecast-accuracy analysis (Paper 4 / WBF)
 
+> **Superseded (revision of November 2026).** This is the forecast-accuracy study of the submitted version. It has three defects. (1) The Alibaba block was computed on the memory column (`mem_util_percent`, see the configuration below), whereas the simulator reads `cpu_util_percent`. (2) It evaluates one step ahead on the series of each VM, whereas the method forecasts the mean of the next six samples of the load of each host, after the Bollinger step in WBP. (3) It uses one PlanetLab day and, for Alibaba and Azure, all the samples of each file, whereas the simulations use ten PlanetLab days and the first 288 samples of each series. The revision recomputes the study with the series, horizon and samples that the simulator uses; the corrected table is reported in the revised manuscript. `WBF` in this file is WBP.
+
 One-step-ahead forecast accuracy of Facebook Prophet vs. two trivial baselines, measured on the raw CPU time series the simulator forecasts. The simulator itself is untouched.
 
 ## Configuration

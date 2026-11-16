@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# ------------------------------------------------------------------------------------------------
+# Forecast-accuracy study of the SUBMITTED version of the manuscript (24 September 2026).
+# Superseded: see the note at the top of SOTA/forecast_accuracy.md. Known defects: the Alibaba
+# block was computed on the memory column, and the study evaluates one step ahead on VM series
+# whereas the method forecasts the mean of the next six samples of the host load.
+# ------------------------------------------------------------------------------------------------
 """
 forecast_accuracy.py
 ====================
@@ -66,7 +72,7 @@ TRACE FORMATS (one file == one VM; representative "*_100_mostDiff" folder each)
 --------------------------------------------------------------------------------
 HOW TO RUN (later -- the CPU is busy with a simulation campaign; DO NOT run now)
 --------------------------------------------------------------------------------
-    cd C:\\Users\\PcVIP\\Desktop\\_publish_vmcons\\SOTA
+    cd SOTA
     python forecast_accuracy.py                 # uses defaults below
     python forecast_accuracy.py --max-vms 100 --stride 1     # full/thorough run
     python forecast_accuracy.py --no-prophet    # baselines only (fast smoke test)

@@ -1,5 +1,7 @@
 # State-of-the-art comparison: AMOVMC and EUQ-VMC inside MetaCloudSim
 
+> **Development notes of the submitted version, kept for the equation-to-code mapping.** The numbers, the references to "Paper-4 Table 6" and the conclusions of this file predate the revision of November 2026: they use earlier runs and the composite energy of the submitted version. The revised manuscript presents a controlled comparison of the detection and selection components with a shared placement stage, complemented with native placement and parameter sweeps, in which no method dominates the others on the four workloads (`results/reference/README.md`). The original AMOVMC and EUQ-VMC articles do not report a value for gamma (AMOVMC overload test) or for the safety factor `safe` (EUQ-VMC): gamma = 0.80 and safe = 1.5 were set by the authors of this package and are not defaults of those articles. The re-implementation of AMOVMC is partial; the differences from its article are listed in the section "What the AMOVMC re-implementation does not reproduce" below. The native placement of EUQ-VMC is a greedy placement on a weighted sum of its objectives, not its MOFPA/D search. `WF` and `WBF` are WP and WBP.
+
 Two recent (2025) VM-consolidation methods re-implemented inside the same
 MetaCloudSim/CloudSim harness used for WBF, so the comparison shares the
 identical energy model, SLA computation, network topology and workload traces.
@@ -8,7 +10,7 @@ a head-to-head against current forecasting/optimisation methods.
 
 | Method | Paper | Traces | What we reproduce |
 |--------|-------|--------|-------------------|
-| **AMOVMC** | Goyal & Awasthi, *Adaptive Multi-Objective VM Consolidation for Energy-Efficient Cloud Data Centers*, J. Grid Computing 23:21 (2025) | PlanetLab, Google, Alibaba | MWOHD host detection + modified VM selection + DWMA predictor |
+| **AMOVMC** | Goyal & Awasthi, *Adaptive Multi-Objective VM Consolidation for Energy-Efficient Cloud Data Centers*, J. Grid Computing 23:21 (2025) | PlanetLab, Google, Alibaba | MWOHD host detection + modified VM selection + DWMA predictor, partially (see "What the AMOVMC re-implementation does not reproduce") |
 | **EUQ-VMC** | Li et al., *Resource-Efficient and Quality-Aware VM Consolidation Method*, J. Grid Computing 23:6 (2025) | Bitbrains, Alibaba | HOD host detection + ROS VM selection + (MOFPA/D objectives) |
 
 Both methods decompose into the same pluggable phases as every other technique in
@@ -39,9 +41,29 @@ runs is the consolidation logic under test (controlled comparison).
 |-------|------|-------|
 | Alg. 1 — dynamic window `ws∈[3,30]` | `DWMAForecastingTechnique.dynamicWindow()` | argmin one-step error |
 | Eq. 17 — weighted moving average | `DWMAForecastingTechnique.wma()` | normaliser `ws*(ws+1)/2` (paper prints `ws*(ws-1)/2`, an apparent typo — corrected so weights sum to 1) |
-| Eq. 18–19 — `PM_util = w1·P_next + w2·A_prev` | `DWMAForecastingTechnique.apply()` + `accuracyWeights()` | w1,w2 from last-10 accuracy of WMA vs persistence |
-| Alg. 2 / Eq. 11 — MWOHD performance threshold | `FutureHostOverSaturationAMOVMC` | Eq. 11 inverted at performance `gamma` → critical **utilisation** `u_crit` (function of #VMs `V_n`); host over-utilised iff forecasted util > `u_crit`. `gamma = 0.80` (500 ms SLA point). Equivalent to the paper's `u_th < gamma` test while reusing the unchanged migration loop. |
+| Eq. 18–19 — `PM_util = w1·P_next + w2·A_prev` | `DWMAForecastingTechnique.apply()` + `accuracyWeights()` | w1,w2 from last-10 accuracy of WMA vs persistence (last observed value); the neural predictor of the article is not implemented |
+| Alg. 2 / Eq. 11 — MWOHD performance threshold | `FutureHostOverSaturationAMOVMC` | Eq. 11 inverted at performance `gamma` → critical **utilisation** `u_crit` (function of #VMs `V_n`); host over-utilised iff forecasted util > `u_crit`. `gamma = 0.80`, a value set by the authors of this package (the article does not report one). Reuses the unchanged migration loop, but is not equivalent to the paper's `u_th < gamma` test (see below). |
 | Alg. 3 — modified VM selection | `FutureAMOVMCVmSelection` | migrate argmax(combined predicted load) = `vm.getForecastedMIPS()` |
+
+### What the AMOVMC re-implementation does not reproduce
+
+The re-implementation of AMOVMC is partial:
+
+- **Forecast.** The article combines its weighted moving average with a one-layer neural
+  network predictor. The network is not implemented: the forecast is the weighted moving
+  average combined with the last observed value (Eqs. 18–19 as implemented), computed on the
+  aggregate utilisation history of the host.
+- **Overload test.** The code inverts Eq. (11) of the article to obtain a utilisation threshold.
+  Eq. (11) is discontinuous at a utilisation of 0.80, so the inversion is not equivalent to the
+  test `u_th < gamma`: at gamma = 0.80, for hosts with one or two VMs the threshold is 0.64
+  instead of 0.80. In the gamma sweep (`amovmc_tune_*`, gamma = 0.55 to 0.75) the difference
+  affects many more host sizes: between 7 and 19 of the sizes from 1 to 20 VMs, depending on gamma.
+- **Under-utilised hosts.** They are handled by the policy of the simulator (`def`, the same for
+  every technique), not by the 30 % threshold of the article.
+- **Native placement** (`amovmcfit`). It uses equal weights (1/6) for the six terms of the
+  fitness function, whereas the article reports its own weights in its Table 3 (−10, 13, 6,
+  −2.5, −0.25, −0.25); it computes the cycle term as the variance of the utilisation history;
+  and it includes switched-off hosts among the candidate hosts.
 
 ### EUQ-VMC (Li et al. 2025)
 
@@ -112,10 +134,11 @@ Windows/PowerShell prepend the bind mount with the absolute path and keep
 
 Both run end-to-end (exit 0, valid metrics, differentiated behaviour).
 
-## Full comparison — PlanetLab (10 traces × 30 seeds = 300 sims/method)
+## Full comparison — PlanetLab (10 traces × 30 seeds = 300 sims/method; submitted version)
 
-Our reproduction (same harness, shared controlled placement, paper-default
-parameters γ=0.80, safe=1.5). Paper-4 Table 6 values shown for reference.
+Our reproduction (same harness, shared controlled placement, parameters γ=0.80 and
+safe=1.5 set by the authors of this package; the original articles do not report
+them). Paper-4 Table 6 values shown for reference.
 
 | Technique | Energy (kWh) | SLA (%) | # migrations | ESV | RAM in BW (×10⁵) |
 |-----------|-------------:|--------:|-------------:|----:|-----------------:|
@@ -129,7 +152,7 @@ parameters γ=0.80, safe=1.5). Paper-4 Table 6 values shown for reference.
 | **AMOVMC** *(ours)*  | 30.31 | **0.37** | 598 | **11.27** | 69.29 |
 | **EUQ-VMC** *(ours)* | 21.71 | 3.34 | 1298 | 72.14 | 141.42 |
 
-## Reading
+## Reading (submitted version; superseded, see the note at the top)
 
 - **AMOVMC** reaches the lowest SLA (0.37%) and therefore the lowest ESV, but it is
   *performance-obsessed*: it pays **+51% energy** (30.31 vs WBF 20.07) and **+65%
@@ -148,13 +171,14 @@ AMOVMC buys lower SLA with large energy+migration penalties, and EUQ-VMC matches
 WBF's SLA only by migrating 3–4× more. This directly answers the reviewer/Guirado
 concern that the original comparison used only the simulator's internal baselines.
 
-*Note:* numbers use shared placement and the papers' default thresholds; the
+*Note:* numbers use shared placement and the thresholds set by the authors of this
+package (γ=0.80, safe=1.5; the original articles do not report them); the
 qualitative trade-off (WBF = far fewer migrations / lower network cost) is robust to
 parameter choice. Alibaba results for AMOVMC/EUQ-VMC are in
 `output/{amovmc,euqvmc}_alibaba/` (AMOVMC SLA 0.10% / 449 migr; EUQ-VMC SLA 2.71% /
 1841 migr), same pattern.
 
-## Robustness 1 — parameter tuning (PlanetLab 20110303, 30 seeds)
+## Robustness 1 — parameter tuning (PlanetLab 20110303, 30 seeds; energy of the submitted version)
 
 We swept each method's overload-trigger parameter to find its *best* operating
 point (configs `*_tune_*`, kept separate). Reference: WBF mig 310, SLA 3.87%, E 21.9.
@@ -167,15 +191,18 @@ point (configs `*_tune_*`, kept separate). Reference: WBF mig 310, SLA 3.87%, E 
 | 0.70 | 402 | 0.67 | 29.0 |  | 1.00 | 797 | 2.99 | 23.7 |
 | 0.80* | 638 | 0.55 | 33.2 |  | 1.50* | 1210 | 3.23 | 24.4 |
 
-(*default). Even at its best migration point AMOVMC matches WBF's migrations only
+(*setting of the comparison table, chosen by the authors of this package; not a
+default of the original articles). Even at its best migration point AMOVMC matches WBF's migrations only
 by spending **+26% energy** (γ=0.65: 373 migr, 27.7 kWh vs WBF 21.9); EUQ-VMC never
 gets below **+50%** migrations (best 557 vs WBF 310). Parameters move the operating
 point monotonically — confirming the implementations behave correctly.
 
-## Robustness 2 — native placement (PlanetLab 10 traces × 30 seeds)
+## Robustness 2 — native placement (PlanetLab 10 traces × 30 seeds; energy of the submitted version)
 
-Each method run with its *own* placement (`amovmcfit` = AMOVMC fitness Eq. 20;
-`euqmofpad` = EUQ-VMC 3-objective greedy), configs `*_native_*`.
+Each method run with its *own* placement (`amovmcfit` = AMOVMC fitness Eq. 20 with
+equal weights 1/6 for its six terms, not the weights of Table 3 of the article, and
+the other differences listed in "What the AMOVMC re-implementation does not
+reproduce"; `euqmofpad` = EUQ-VMC 3-objective greedy), configs `*_native_*`.
 
 | Technique | Energy | SLA% | migr | ESV | RAM-bw |
 |-----------|-------:|-----:|-----:|----:|-------:|
@@ -191,7 +218,7 @@ while their own placements ignore the routing-energy model. So the shared placem
 is actually the *fairest* (best) configuration for the competitors — and WBF still
 holds the migration/network advantage by a wide margin.
 
-## Conclusion (honest framing)
+## Conclusion (submitted version; superseded, see the note at the top)
 
 This is **not** a clean win on every metric — be transparent about it:
 

@@ -1,5 +1,7 @@
 # Transposed SOTA table (all metrics) — composite energy, mean ± CI95
 
+> **Table of the submitted version (24 September 2026).** Composite energy as then defined; "RAM in BW" is the migration traffic as registered by the simulator, which counts each migration twice. Superseded by `results/reference/README.md`.
+
 
 ## PlanetLab
 

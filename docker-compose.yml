@@ -5,7 +5,7 @@
 # pymodule all come from your clone. Results are written to ./results.
 #
 #   docker compose build                       # build the image (first time, ~10 min)
-#   docker compose run --rm sim                 # default: PlanetLab (WBF + Prophet)
+#   docker compose run --rm sim                 # default: PlanetLab (WP and WBP)
 #   docker compose run --rm sim java -jar metacloud.jar testbed paper4_full_alibaba_prophet
 #   docker compose up jupyter                   # analysis notebooks at http://localhost:8888
 

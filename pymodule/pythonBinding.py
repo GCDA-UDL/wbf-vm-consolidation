@@ -6,7 +6,9 @@ import plotly.graph_objects as go
 import random
 import sys
 
-rootPath = "C:/Users/Sergi/Documents/networkExperiments/workloads/"
+# Workloads folder: <working directory>/workloads by default (the repository root in the container);
+# override with the environment variable WBF_WORKLOADS. Only the helper getWorkloads() uses it.
+rootPath = os.environ.get("WBF_WORKLOADS", "workloads").rstrip("/\\") + "/"
 
 
 def get_bollinger(ser, winma=10, alpha=2):

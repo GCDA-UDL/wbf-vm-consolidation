@@ -24,16 +24,19 @@ import svila.policiesVmOptimizer.future.FutureVm;
  * <ul>
  *   <li>dU  (Eq. 21) — mean |consecutive difference| of the utilisation history (volatility)</li>
  *   <li>Umax/Umin (Eq. 22/23) — max/min utilisation</li>
- *   <li>Ccycle (Eq. 24) — fluctuation around the midpoint (variance of the history)</li>
+ *   <li>Ccycle (Eq. 24) — fluctuation around the midpoint; computed here as the variance of
+ *       the history</li>
  *   <li>Upred — predicted utilisation after the VM is placed</li>
  *   <li>UPer — fraction of history breaching the performance threshold (0.80)</li>
  * </ul>
  *
  * <p>The fitness rewards stable, predictable hosts with adequate head-room, which is
  * the paper's stated goal (reduce over-utilisation risk and unnecessary migrations).
- * Equal weights a_i = 1/6 are used (the paper leaves them tunable); this is
+ * Equal weights a_i = 1/6 are used; the article reports its own weights in its
+ * Table 3 (-10, 13, 6, -2.5, -0.25, -0.25), which are not the ones used here. This is
  * documented in SOTA_COMPARISON.md. Only the host-scoring differs from the shared
- * placement — VM ordering and migration-map construction are inherited.</p>
+ * placement — VM ordering, migration-map construction and the candidate hosts are
+ * inherited, so switched-off hosts are among the candidates.</p>
  */
 public class FutureAMOVMCPlacement extends FutureAbsoluteCapacityVmMigrationPolicy {
 
