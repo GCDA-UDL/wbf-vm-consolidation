@@ -274,6 +274,16 @@ relative to the repository (`PKG`, `IMAGE`, `FA_OUT`); `gen_timing.sh` was added
   identical to those of the campaign (3,168 files), and `mt_gen.py` those of the additional traces
   (1,200 files and the six lists); `build_revision.py`, `build_tables.py`, `mt_build_table.py` and
   `fa_tables.py`, run on the per-run caches of `caches/`, reproduce the tables byte for byte.
-- Not yet executed in this layout: `start_campaign.sh`, `mt_start_campaign.sh`, `run_singles.sh`,
-  `start_fa.sh`, `collect.sh` and `mt_collect.sh` (they need Docker or the raw outputs).
+- Executed in this layout on 17 November 2026 (v0.3.1): `mt_smoke.sh`, with `mt_start_campaign.sh`,
+  `mt_preflight.sh`, `run_singles.sh` and `mt_verify_runs.py`, in the images `metacloudsim:rev1` and
+  `metacloudsim-neural` of the campaign: the 40 runs passed the check. 24 of the 36 runs without
+  NeuralProphet gave the same results as seed 0 of the campaign, apart from the timing fields; the other
+  12 and the four BB+NeoPro runs differ within the spread of the 30 seeds (ties are resolved by the
+  iteration order of hash-based collections, see the reproducibility statement of the manuscript, and
+  NeuralProphet trains a neural network). This test found that v0.3.0 could not launch BB+NeoPro from
+  this layout: `mt_start_campaign.sh` ran the preflight in the read-only copy of the repository, where
+  `neuralprophet` cannot be imported because it opens `logs.log` in the current directory. v0.3.1 runs it
+  in `/workspace`. `gen_t1.sh 0-29` was also run again and wrote the lists of the campaign unchanged.
+- Not yet executed in this layout: `start_campaign.sh`, `start_fa.sh`, `collect.sh` and
+  `mt_collect.sh` (they need Docker or the raw outputs of the full campaigns).
   `mt_check_traces.py` needs the full original traces, which are not shipped.

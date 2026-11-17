@@ -10,6 +10,8 @@
 # Resume after an interruption: run the same command again (finished runs are skipped).
 # PKG: repository root (default: two levels above this folder); its testbed/ must hold the single
 #      testbeds written by tools/mt_gen.py.
+# Working directory: /workspace (writable) before the preflight, because neuralprophet 0.2.7 opens
+# logs.log in the current directory when it is imported and /pkgsrc is mounted read-only.
 # LD_PRELOAD: the Dockerfile sets it; it is passed again for images built before that line, in which
 # jpy fails to load ("undefined symbol: PyFloat_Type").
 set -eu
@@ -27,4 +29,4 @@ docker run -d --name "mcs_$CAMP" \
   -e LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libpython3.8.so.1.0 \
   -v "$PKG:/pkgsrc:ro" -v "$E/lists:/lists:ro" -v "$E/tools:/tools:ro" \
   -v "$E/output:/hostout" -v "$E/runlogs:/hostlogs" \
-  "$IMAGE" bash -c "cd /pkgsrc && cp -r environment hosts interactions launcher.json metacloud.jar pymodule scripts testbed topologies vms workloads /workspace/ && bash /tools/mt_preflight.sh /lists/$LIST $CAMP $IMAGE && bash /tools/run_singles.sh /lists/$LIST $PAR $CAMP"
+  "$IMAGE" bash -c "cd /pkgsrc && cp -r environment hosts interactions launcher.json metacloud.jar pymodule scripts testbed topologies vms workloads /workspace/ && cd /workspace && bash /tools/mt_preflight.sh /lists/$LIST $CAMP $IMAGE && bash /tools/run_singles.sh /lists/$LIST $PAR $CAMP"

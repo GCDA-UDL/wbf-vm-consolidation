@@ -4,6 +4,19 @@ Changes of the reproduction package from one version to the next. Versions are t
 repository. For the versions up to v0.2.3 see the tags and the section "What's new in v0.2.0" of
 `README.md`.
 
+## v0.3.1 (2026-11-17)
+
+Fixes of the launchers of the additional traces, found by running their smoke test from this layout.
+Results and tables are unchanged.
+
+- `experiments/revision_r1/tools/mt_start_campaign.sh` runs the preflight in `/workspace`. In v0.3.0
+  it ran in the read-only copy of the repository, where `neuralprophet` 0.2.7 cannot be imported (it
+  opens `logs.log` in the current directory), so the preflight stopped every BB+NeoPro campaign.
+- `experiments/revision_r1/tools/mt_smoke.sh` writes its check to `runlogs/mt_smoke/_verify.md`
+  instead of overwriting `tables/mt_verify_runs.md`, the check of the 1,200 runs.
+- `experiments/revision_r1/README.md` states which scripts have been executed in this layout and the
+  result of the smoke test; `TODO.md` brought up to date.
+
 ## v0.3.0 (2026-11-17)
 
 Changes with respect to v0.2.3. This version follows the manuscript as revised after peer review.

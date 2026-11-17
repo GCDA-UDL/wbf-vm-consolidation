@@ -9,7 +9,7 @@ abstract: >-
   notebooks, plus partial re-implementations of the AMOVMC and EUQ-VMC (2025) baselines in the same simulator,
   the experiments of the revision of the manuscript and the per-run caches from which its tables are computed.
 type: software
-version: 0.3.0
+version: 0.3.1
 date-released: 2026-11-17
 license: MIT
 repository-code: "https://github.com/GCDA-UDL/wbf-vm-consolidation"

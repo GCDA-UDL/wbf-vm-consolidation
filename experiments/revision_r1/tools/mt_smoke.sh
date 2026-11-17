@@ -6,8 +6,9 @@
 # - mt_smokenp: lists/mt_smoke_neural.txt (4 BB+NeoPro runs), image metacloudsim-neural, 4 in
 #               parallel (MT_PAR_SMOKENP).
 # Samples the memory of both containers every 15 s (runlogs/mt_smoke/_mem.log), waits for both, then
-# verifies the runs (tables/mt_verify_runs.md). The smoke results are seed 0 of the campaign; the campaign
-# lists skip them later.
+# verifies the runs (runlogs/mt_smoke/_verify.md; tables/mt_verify_runs.md is the check of the 1,200 runs,
+# written by tools/mt_collect.sh). The smoke results are seed 0 of the campaign; the campaign lists skip
+# them later.
 set -eu
 export MSYS_NO_PATHCONV=1
 cd "$(dirname "$0")/.."
@@ -22,4 +23,5 @@ while running mcs_mt_smoke mcs_mt_smokenp; do
 done
 echo "container exit codes: mcs_mt_smoke $(docker wait mcs_mt_smoke), mcs_mt_smokenp $(docker wait mcs_mt_smokenp)"
 tail -n 3 runlogs/mt_smoke/_campaign.log runlogs/mt_smokenp/_campaign.log
-PYTHONIOENCODING=utf-8 python -B tools/mt_verify_runs.py --lists mt_smoke.txt,mt_smoke_neural.txt
+PYTHONIOENCODING=utf-8 python -B tools/mt_verify_runs.py --lists mt_smoke.txt,mt_smoke_neural.txt \
+  --out runlogs/mt_smoke/_verify.md
