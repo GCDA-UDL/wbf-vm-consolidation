@@ -1,0 +1,32 @@
+{
+  "title": "Virtual Machine Consolidation in Cloud Computing Using Prophet's Forecasting Tool (reproduction package)",
+  "upload_type": "software",
+  "version": "0.3.0",
+  "license": "MIT",
+  "creators": [
+    {"name": "da Silva, Vitor L.", "orcid": "0000-0002-3296-2752", "affiliation": "SEMBAC, Universitat de Lleida"},
+    {"name": "Vila, Sergi", "orcid": "0000-0002-4536-5025", "affiliation": "SEMBAC, Universitat de Lleida"},
+    {"name": "Tomás, Rosa Ana", "orcid": "0000-0002-1995-3974", "affiliation": "SEMBAC, Universitat de Lleida"},
+    {"name": "Roig, Concepció", "orcid": "0000-0003-3029-3820", "affiliation": "SEMBAC, Universitat de Lleida"},
+    {"name": "Giné, Francesc", "orcid": "0000-0002-2348-5018", "affiliation": "SEMBAC, Universitat de Lleida"},
+    {"name": "Cores, Fernando", "orcid": "0000-0003-2910-6709", "affiliation": "SEMBAC, Universitat de Lleida"},
+    {"name": "Lérida, Josep L.", "orcid": "0000-0002-9352-9338", "affiliation": "SEMBAC, Universitat de Lleida"},
+    {"name": "Guirado, Fernando", "orcid": "0000-0003-1352-9555", "affiliation": "SEMBAC, Universitat de Lleida"}
+  ],
+  "description": "<p>Self-contained Docker reproduction package for WBP (WPSP + Bollinger Bands + Prophet), a network-aware proactive virtual-machine consolidation method for cloud data centers, built on CloudSim/MetaCloudSim. It includes the simulator, the experiment configurations, 100-VM workload subsets (PlanetLab, Alibaba 2018, Materna, Microsoft Azure 2019), the forecasting code and the analysis scripts, plus partial re-implementations of the AMOVMC and EUQ-VMC (2025) baselines in the same simulator.</p><p>Version 0.3.0 accompanies the first revision of the manuscript: corrected result tables; the configurations, scripts and tables of the revision experiments (closed-loop replacement of the forecaster, sensitivity to the Bollinger parameters, forecast accuracy, and two further traces of Alibaba and two of Materna); and the per-run caches from which every table is computed. See CHANGELOG.md and REPRODUCE.md.</p><p>This work has been granted by the Ministerio de Ciencia, Innovación y Universidades (MICIU) AEI/10.13039/501100011033 under contract PID2023-146193OB-I00.</p>",
+  "keywords": [
+    "cloud computing",
+    "virtual machine consolidation",
+    "Prophet",
+    "Bollinger Bands",
+    "CloudSim",
+    "energy efficiency",
+    "forecasting",
+    "service level agreement",
+    "VM migration",
+    "reproduction package"
+  ],
+  "related_identifiers": [
+    {"relation": "isSupplementTo", "identifier": "https://github.com/GCDA-UDL/wbf-vm-consolidation/tree/v0.3.0", "resource_type": "software", "scheme": "url"}
+  ]
+}

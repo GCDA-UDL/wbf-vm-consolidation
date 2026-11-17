@@ -6,10 +6,11 @@ abstract: >-
   a network-aware proactive virtual-machine consolidation method for cloud data centers, built on
   CloudSim/MetaCloudSim. Includes the simulator, experiment configurations, 100-VM workload
   subsets (PlanetLab, Alibaba 2018, Materna, Microsoft Azure 2019), forecasting code and analysis
-  notebooks, plus partial re-implementations of the AMOVMC and EUQ-VMC (2025) baselines in the same simulator.
+  notebooks, plus partial re-implementations of the AMOVMC and EUQ-VMC (2025) baselines in the same simulator,
+  the experiments of the revision of the manuscript and the per-run caches from which its tables are computed.
 type: software
-version: 0.2.3
-date-released: 2026-07-04
+version: 0.3.0
+date-released: 2026-11-17
 license: MIT
 repository-code: "https://github.com/GCDA-UDL/wbf-vm-consolidation"
 keywords:

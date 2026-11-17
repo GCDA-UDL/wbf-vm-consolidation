@@ -42,3 +42,5 @@ experiments/revision_r1/runlogs/
 testbed/cl_*__*.json
 testbed/bs_*__*.json
 testbed/tm_*__*.json
+testbed/mt_*__*.json
+experiments/revision_r1/cache_mt/

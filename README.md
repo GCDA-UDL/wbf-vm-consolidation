@@ -139,9 +139,10 @@ package follows the revised manuscript.
 - **Added by the revision, reported in the revised manuscript:** a closed-loop replacement of the
   forecaster (last value, EWMA, Prophet, each with and without the Bollinger step; 2,340 runs), a
   sensitivity analysis of the Bollinger parameters N and alpha (780 runs besides the reference
-  setting N = 5, alpha = 0.5) and the forecast accuracy under the protocol of the method. Run lists,
-  tools and tables are in [experiments/revision_r1/](experiments/revision_r1/README.md); their raw
-  outputs are not shipped in this version.
+  setting N = 5, alpha = 0.5), the forecast accuracy under the protocol of the method, and the ten
+  techniques on two further traces of Alibaba and two of Materna (1,200 runs). Run lists, tools,
+  tables and the per-run caches from which every table is computed are in
+  [experiments/revision_r1/](experiments/revision_r1/README.md); the raw outputs are not shipped.
 
 The list of changes with respect to v0.2.3 is in [CHANGELOG.md](CHANGELOG.md).
 

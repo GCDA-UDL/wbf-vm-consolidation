@@ -100,10 +100,12 @@ package; the original articles do not report these values. The `*_tune_*` config
 
 ### Experiments added by the revision
 
-The closed-loop replacement of the forecaster, the sensitivity to the Bollinger parameters and the
-forecast accuracy under the protocol of the method have their own run lists and launch scripts,
+The closed-loop replacement of the forecaster, the sensitivity to the Bollinger parameters, the
+forecast accuracy under the protocol of the method and the additional traces of Alibaba and Materna
+have their own run lists and launch scripts,
 which execute one simulation per JVM from single-configuration testbeds derived from
-`p4_pl_<day>_st` and `paper4_full_<workload>_prophet_st`. See
+`p4_pl_<day>_st` and `paper4_full_<workload>_prophet_st` (for the additional traces, from the
+`testbed/mt_*` copies of the testbeds of the main tables, with only the trace changed). See
 [experiments/revision_r1/README.md](experiments/revision_r1/README.md).
 
 ---

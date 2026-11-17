@@ -10,7 +10,12 @@ hand. The `.tex` files are the tables included in the revised manuscript.
 | `bollinger_sensitivity.md`, `tab_bollinger_sensitivity.tex` | `tab:bollinger_sensitivity` | WBP with N in 3, 5, 10, 20 (alpha 0.5) and alpha in 0.5, 1.0, 1.5, 2.0 (N 5), 13 traces × seeds 0-9, with paired contrasts against (5, 0.5) | 780 + the 130 runs of the reference setting |
 | `forecast_accuracy.md`, `tab_forecast_accuracy.tex` | `tab:forecast_val_u` | forecast accuracy on the series the simulator reads: protocol A, protocol B and protocol B with the Bollinger input | no simulation; 1,700 VM blocks |
 | `inventory.md` | none | complete runs per family, workload and variant | 3,168 |
+| `more_traces.md`, `tab_more_traces.tex`, `more_traces.json` | `tab:more_traces` | the ten techniques on Materna traces 2 and 3 and Alibaba days 5 and 8, 30 seeds, with paired tests of WBP against MU, MMT, RS and MC | 1,200 |
+| `mt_trace_check.md` | none | the four additional subsets: rows and column the simulator reads, selection rule, CPU statistics | no simulation |
+| `mt_config_diff.md` | none | proof that the configurations of the additional traces differ from those of the main tables only in the trace | no simulation |
+| `mt_verify_runs.md` | none | per run of the additional traces: configuration stored in the result, folder and rows the reader opened, image | 1,200 |
 
-Folder prefixes of the raw outputs: `cl_` closed loop, `bs_` Bollinger sensitivity, `tm_` decision time.
+Folder prefixes of the raw outputs: `cl_` closed loop, `bs_` Bollinger sensitivity, `tm_` decision time,
+`mt_` additional traces.
 
 How to rebuild them: see `../README.md`.

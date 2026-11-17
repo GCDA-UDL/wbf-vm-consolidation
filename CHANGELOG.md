@@ -4,7 +4,7 @@ Changes of the reproduction package from one version to the next. Versions are t
 repository. For the versions up to v0.2.3 see the tags and the section "What's new in v0.2.0" of
 `README.md`.
 
-## Unreleased
+## v0.3.0 (2026-11-17)
 
 Changes with respect to v0.2.3. This version follows the manuscript as revised after peer review.
 
@@ -23,8 +23,15 @@ Changes with respect to v0.2.3. This version follows the manuscript as revised a
   scripts of that analysis that were missing are added.
 - **Experiments of the revision.** New folder `experiments/revision_r1/`: run lists, tools and
   resulting tables of the closed-loop replacement of the forecaster (2,340 runs), the sensitivity
-  to the Bollinger parameters N and alpha (780 runs besides the reference setting) and the forecast
-  accuracy under the protocol of the method. Their raw outputs are not shipped in this version.
+  to the Bollinger parameters N and alpha (780 runs besides the reference setting), the forecast
+  accuracy under the protocol of the method, and the ten techniques on two further traces of Alibaba
+  (days 5 and 8) and two of Materna (traces 2 and 3), 1,200 runs (`mt_` tools, table
+  `tab_more_traces.tex`). The four new workload subsets are in `workloads/` and their 20 base
+  testbeds in `testbed/mt_*.json`.
+- **Per-run caches.** `experiments/revision_r1/caches/` holds, compressed, the per-run records of the
+  3,900 simulations of the main tables and of the 4,368 simulations of the revision experiments, and
+  the timing log of the decision time; every table of the revised manuscript can be rebuilt from them
+  (`experiments/revision_r1/README.md`, "Per-run caches"). The raw outputs are not shipped.
 - **Documentation of the compared methods.** gamma = 0.80 (AMOVMC) and safe = 1.5 (EUQ-VMC) are
   settings chosen by the authors of this package; the original articles do not report them. The
   re-implementation of AMOVMC is documented as partial: its neural predictor is not implemented,
